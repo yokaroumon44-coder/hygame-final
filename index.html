@@ -347,7 +347,11 @@
   }
   .person-card:hover{transform:translateY(-3px);border-color:rgba(15,107,92,.3);box-shadow:var(--shadow)}
   .person-head{display:flex;align-items:flex-start;gap:11px;flex-wrap:wrap}
+  .avatar-link{flex:none;display:block;border-radius:16px;transition:transform .2s,box-shadow .2s}
+  .avatar-link:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(24,32,43,.16)}
   .avatar{
+    position:relative;
+    overflow:hidden;
     flex:none;
     display:flex;
     align-items:center;
@@ -363,6 +367,26 @@
     line-height:1;
     box-shadow:inset 0 0 0 1px rgba(255,255,255,.22),0 6px 14px rgba(24,32,43,.12);
     user-select:none;
+  }
+  .avatar-initial{position:relative;z-index:0;line-height:1}
+  .avatar img{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:inherit;background:#e7e0d3}
+  .avatar-x{
+    position:absolute;
+    right:2px;bottom:2px;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:14px;height:14px;
+    box-sizing:content-box;
+    border:2px solid var(--card);
+    border-radius:50%;
+    background:#0f1419;
+    color:#fff;
+    font-family:var(--font-sans);
+    font-size:8px;
+    font-weight:900;
+    line-height:1;
   }
   .person-title{min-width:0;flex:1 1 140px}
   .person-title h3{margin:0 0 2px;font-size:16.5px;line-height:1.35;letter-spacing:-.02em;font-weight:900;overflow-wrap:anywhere}
@@ -586,7 +610,7 @@
         <div class="hero-badge">UNOFFICIAL FAN SUMMARY / 非公式</div>
         <h1 id="hero-title">ハイゲ <span>FINAL</span></h1>
         <p class="hero-sub">出演者まとめ</p>
-        <p class="hero-lead">現地で「この人誰？」とならないための、非公式の出演者ガイド。公式画像・ロゴは使用していません。名前・所属・経歴・リンクを、公開情報をもとにまとめています。</p>
+        <p class="hero-lead">現地で「この人誰？」とならないための、非公式の出演者ガイド。公式サイトの画像・ロゴは使用していません。人物アイコンはXのプロフィール画像を外部参照しています。名前・所属・経歴・リンクを、公開情報をもとにまとめています。</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#roster">出演者を見る <span aria-hidden="true">↓</span></a>
           <a class="btn btn-ghost" href="https://lp.openrec.jp/hyper-game-event-final/" target="_blank" rel="noopener noreferrer">公式サイト ↗</a>
@@ -606,7 +630,7 @@
           </div>
           <div class="countdown-note"><span>DAY1 <b>11.28 SAT</b> 14:30開演</span><span>DAY2 <b>11.29 SUN</b> 13:00開演</span></div>
         </div>
-        <p class="hero-disclaimer">本ページはOPENREC・出演者・各団体とは関係のない非公式ファンページです。公式画像・ロゴは使用していません。</p>
+        <p class="hero-disclaimer">本ページはOPENREC・出演者・各団体とは関係のない非公式ファンページです。公式サイトの画像・ロゴは使用していません。人物アイコンはXのプロフィール画像を外部参照しています。</p>
       </div>
     </div>
   </section>
@@ -666,7 +690,7 @@
       <div class="info-grid" style="margin-top:12px">
         <div class="info-card disclaimer-card">
           <h3>このページについて</h3>
-          <p>本ページは非公式のファンまとめです。OPENREC、出演者、所属団体とは関係ありません。公式画像・ロゴは使用していません。掲載情報は2026年10月29日時点の公開情報をもとにしています。</p>
+          <p>本ページは非公式のファンまとめです。OPENREC、出演者、所属団体とは関係ありません。公式サイトの画像・ロゴは使用していません。人物アイコンはXのプロフィール画像を外部参照しており、画像の権利は各投稿者に帰属します。掲載情報は2026年10月29日時点の公開情報をもとにしています。</p>
         </div>
         <div class="info-card">
           <h3>はじめての人へ</h3>
@@ -792,7 +816,7 @@
           <span class="brand-mark" aria-hidden="true">H</span>
           <strong>HYG FINAL 2026 / 非公式まとめ</strong>
         </div>
-        <p>本ページは、2026年11月28日・29日に東京ドームで開催される「配信者ハイパーゲーム大会 FINAL」の出演者を個人用にまとめた非公式ファンページです。OPENREC、出演者、所属団体とは関係ありません。公式画像・ロゴは使用していません。掲載情報は2026年10月29日時点の公開情報をもとにしています。</p>
+        <p>本ページは、2026年11月28日・29日に東京ドームで開催される「配信者ハイパーゲーム大会 FINAL」の出演者を個人用にまとめた非公式ファンページです。OPENREC、出演者、所属団体とは関係ありません。公式サイトの画像・ロゴは使用していません。人物アイコンはXのプロフィール画像を外部参照しており、画像の権利は各投稿者に帰属します。掲載情報は2026年10月29日時点の公開情報をもとにしています。</p>
       </div>
       <div class="footer-links">
         <a href="https://lp.openrec.jp/hyper-game-event-final/" target="_blank" rel="noopener noreferrer">公式サイト ↗</a>
@@ -831,7 +855,8 @@
       "youtube": "https://www.youtube.com/channel/UChUjERVG8eKEAJSCef-tTmg",
       "twitch": "https://www.twitch.tv/k4sen",
       "site": "https://zetadivision.com/players/k4sen"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2111326957585793024/zYVX2uSy_400x400.jpg"
   },
   {
     "id": "shaka",
@@ -854,7 +879,8 @@
       "youtube": "https://www.youtube.com/channel/UCjg5-lUiUzdmzzBRY9Xqrhw",
       "twitch": "https://www.twitch.tv/fps_shaka",
       "site": "https://zetadivision.com/players/shaka"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1871100394421796864/bEE1YV-7_400x400.jpg"
   },
   {
     "id": "mokou",
@@ -877,7 +903,8 @@
       "youtube": "https://www.youtube.com/channel/UCENoC6MLc4pL-vehJyzSWmg",
       "twitch": "https://www.twitch.tv/mokouliszt1",
       "site": "https://dorokusa.co.jp/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1918686136719052800/hXngsDff_400x400.jpg"
   },
   {
     "id": "seki",
@@ -899,7 +926,8 @@
       "x": "https://x.com/stylishnoob",
       "youtube": "https://www.youtube.com/channel/UC2j4lymo8Ce_1RXMeo4afcQ",
       "twitch": "https://www.twitch.tv/stylishnoob4"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2098111412950433792/XAiVNyJ__400x400.jpg"
   },
   {
     "id": "kato",
@@ -920,7 +948,8 @@
       "youtube": "https://www.youtube.com/channel/UCx1nAvtVDIsaGmCMSe8ofsQ",
       "twitch": "https://www.twitch.tv/kato_junichi0817",
       "site": "https://www.murash.jp/talent/katou_junichi-2/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1567883469682012160/REhbDoot_400x400.jpg"
   },
   {
     "id": "oooda",
@@ -939,7 +968,8 @@
       "youtube": "https://www.youtube.com/channel/UChiEaapLE92m5sCV7oGG6IA",
       "twitch": "https://www.twitch.tv/oooda",
       "site": "https://gloe.jp/cast/oooda/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2015332701394616320/bED86bjg_400x400.jpg"
   },
   {
     "id": "kishi",
@@ -957,7 +987,8 @@
       "x": "https://x.com/StanSmith_jp",
       "twitch": "https://www.twitch.tv/stansmith_jp",
       "site": "https://protagon.co.jp/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1688755487356133376/z8mox-XX_400x400.jpg"
   },
   {
     "id": "hiraiwa",
@@ -975,7 +1006,8 @@
       "x": "https://x.com/kouhiraiwa777",
       "youtube": "https://www.youtube.com/channel/UCWRv0opKmUbsNmcjwRtfC0w",
       "site": "https://www.odyssey-esports.com/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1837708201783173120/ohGxiNoU_400x400.jpg"
   },
   {
     "id": "ishida",
@@ -992,7 +1024,8 @@
     "links": {
       "x": "https://x.com/can2525can",
       "site": "https://www.horipro.co.jp/ishidaharuka/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2046206884500434944/dR4NScqs_400x400.jpg"
   },
   {
     "id": "akami",
@@ -1014,7 +1047,8 @@
       "youtube": "https://www.youtube.com/channel/UCWV9E1l5YItrPEAWHoNmieQ",
       "twitch": "https://www.twitch.tv/akamikarubi",
       "site": "https://crazyraccoon.jp/member/akami-karubi/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1488580321365086208/UEJ-cn-m_400x400.jpg"
   },
   {
     "id": "assari",
@@ -1032,7 +1066,8 @@
       "x": "https://x.com/Saaanjjiii",
       "youtube": "https://www.youtube.com/channel/UCz0aC9z3kXruRHULDqFRuVA",
       "twitch": "https://www.twitch.tv/assarisyoko1"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2112066212406706177/-lNihpGK_400x400.jpg"
   },
   {
     "id": "amatsuki",
@@ -1053,7 +1088,8 @@
       "site": "https://crazyraccoon.jp/member/sushimaster/",
       "community": "https://twitcasting.tv/_amatsuki_",
       "communityLabel": "ツイキャス"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1609859661922197504/3LpeQ8iW_400x400.jpg"
   },
   {
     "id": "ayutaro",
@@ -1074,7 +1110,8 @@
       "youtube": "https://www.youtube.com/@ayutaroch",
       "twitch": "https://www.twitch.tv/ayutarochan",
       "site": "https://trapeziste-creative.com/model/ayuka/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2078091086980149248/ux_REXeH_400x400.jpg"
   },
   {
     "id": "iori",
@@ -1092,7 +1129,8 @@
       "x": "https://x.com/moe_five",
       "youtube": "https://www.youtube.com/c/iorimoe",
       "twitch": "https://www.twitch.tv/moe_iori"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2005231584526614528/CGFNTAkS_400x400.jpg"
   },
   {
     "id": "enako",
@@ -1111,7 +1149,8 @@
       "youtube": "https://www.youtube.com/channel/UCrUdiKv9LERZmG_MKh63Xgg",
       "twitch": "https://www.twitch.tv/enako_chan",
       "site": "https://ppe.jp/talent/enako/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1566064687976189953/AHpvbx_v_400x400.jpg"
   },
   {
     "id": "oniya",
@@ -1130,7 +1169,8 @@
       "youtube": "https://www.youtube.com/channel/UCLiQ--EXgzUV03q5jKQYWcw",
       "twitch": "https://www.twitch.tv/oniyadayo",
       "site": "https://reject.jp/member/o-228/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2043966603747045379/F3XGJmE5_400x400.jpg"
   },
   {
     "id": "kyoichiro",
@@ -1148,7 +1188,8 @@
       "youtube": "https://www.youtube.com/channel/UClX3YSREJp3ELuv2wFAYOzA",
       "twitch": "https://www.twitch.tv/dmf_kyochan",
       "site": "https://uuum.jp/creator/kyo_channel"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1116006055379521536/lrga3YCH_400x400.png"
   },
   {
     "id": "kenki",
@@ -1166,7 +1207,8 @@
       "x": "https://x.com/T_kenki",
       "youtube": "https://www.youtube.com/channel/UCNicQVuAQJYlCQKEw1TKn1A",
       "twitch": "https://www.twitch.tv/kenki521"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2042643426727092224/uUirQazZ_400x400.jpg"
   },
   {
     "id": "kokunii",
@@ -1185,7 +1227,8 @@
       "youtube": "https://www.youtube.com/channel/UCcO-FDMK_mPWEnoxyNDwvNw",
       "twitch": "https://www.twitch.tv/kokujintv",
       "site": "https://reject.jp/member/kokunii/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2022985483694059520/63rSq40y_400x400.jpg"
   },
   {
     "id": "gocchan",
@@ -1206,7 +1249,8 @@
       "youtube": "https://www.youtube.com/channel/UCgFKdFutAhwsWSoeZ6zXJrg",
       "twitch": "https://www.twitch.tv/gocchanmikey",
       "site": "https://crazyraccoon.jp/member/gocchanmikey/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1774864009277399044/p-YJwyNB_400x400.jpg"
   },
   {
     "id": "shibuya",
@@ -1225,7 +1269,8 @@
       "youtube": "https://www.youtube.com/channel/UChLfthKoUV502J7gU9STArg",
       "twitch": "https://www.twitch.tv/shibuyahal",
       "site": "https://neo-porte.jp/member/shibuya-hal"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1876596978723049472/FTZgqf3l_400x400.jpg"
   },
   {
     "id": "shinji",
@@ -1246,7 +1291,8 @@
       "youtube": "https://www.youtube.com/channel/UCo9ioj4sW3BmxSDizpdT6Gw",
       "twitch": "https://www.twitch.tv/shinjifromjapanxd",
       "site": "https://riddle.info/members/shinjisan/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2092682503392038912/i8k-3H-s_400x400.jpg"
   },
   {
     "id": "suzuki",
@@ -1265,7 +1311,8 @@
       "youtube": "https://www.youtube.com/@NORIAKIISGOOD",
       "twitch": "https://www.twitch.tv/suzukinoriaki",
       "site": "https://zetadivision.com/players/%e9%88%b4%e6%9c%a8%e3%83%8e%e3%83%aa%e3%82%a2%e3%82%ad"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1730863477651374080/Gnx0KizJ_400x400.jpg"
   },
   {
     "id": "stanmi",
@@ -1284,7 +1331,8 @@
       "youtube": "https://www.youtube.com/channel/UCcGSTI830YkwaocFV31Q7MA",
       "twitch": "https://www.twitch.tv/sutanmi",
       "site": "https://tsubasa-records.co.jp/sutanmi-japan/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1750132818607587328/La8V0Hvy_400x400.jpg"
   },
   {
     "id": "spygea",
@@ -1302,7 +1350,8 @@
       "x": "https://x.com/spygea_jp",
       "youtube": "https://www.youtube.com/channel/UCBnFEiB9v4afsg8tbhmIACQ",
       "twitch": "https://www.twitch.tv/spygea"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2048684243879165953/HAHUG3LW_400x400.jpg"
   },
   {
     "id": "sumomo",
@@ -1321,7 +1370,8 @@
       "youtube": "https://www.youtube.com/channel/UC38hCsF3st1pBJBw8JnAu2g",
       "twitch": "https://www.twitch.tv/sumomo_x",
       "site": "https://team-detonation.net/team/member/sumomoxqx"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1700077459222466560/O8WS0euf_400x400.jpg"
   },
   {
     "id": "zerost",
@@ -1342,7 +1392,8 @@
       "youtube": "https://www.youtube.com/channel/UCBtAasNQYblmWPx1R77tcEA",
       "twitch": "https://www.twitch.tv/zerost_s",
       "site": "https://reject.jp/member/zerost/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1837318688850206721/xXoCV9ZR_400x400.jpg"
   },
   {
     "id": "taiji",
@@ -1361,7 +1412,8 @@
       "youtube": "https://www.youtube.com/channel/UCTrckUWmmrRZcNrfu1mZDOg",
       "twitch": "https://www.twitch.tv/yaritaiji",
       "site": "https://reject.jp/member/taiji/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1042311297155526656/x9w0plZ1_400x400.jpg"
   },
   {
     "id": "bakumatsu",
@@ -1381,7 +1433,8 @@
       "x": "https://x.com/kirizaki_ei",
       "youtube": "https://www.youtube.com/channel/UC0C6oq3TlGiSlDCei57hY6A",
       "twitch": "https://www.twitch.tv/bakumatsu_shishi"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/653142805380886528/Ge0GVplA_400x400.jpg"
   },
   {
     "id": "batora",
@@ -1401,7 +1454,8 @@
       "x": "https://x.com/batora324",
       "youtube": "https://www.youtube.com/channel/UC67WMeSJs-HwKb-pCN6Z63Q",
       "twitch": "https://www.twitch.tv/batora324"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1629912379978027008/KlV3mY4n_400x400.jpg"
   },
   {
     "id": "hiiragi",
@@ -1422,7 +1476,8 @@
       "youtube": "https://www.youtube.com/channel/UCWnQDjlXTLDyYowc3LaHyJQ",
       "twitch": "https://www.twitch.tv/hiiragitsurugi",
       "site": "https://neo-porte.jp/member/hiiragi-tsurugi"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1807695475996491776/1g_2B3gT_400x400.jpg"
   },
   {
     "id": "biju",
@@ -1443,7 +1498,8 @@
       "youtube": "https://www.youtube.com/channel/UCelyu3V0ml45H3Ulm8RaaDw",
       "twitch": "https://www.twitch.tv/bijusan",
       "site": "https://murashgaming.co.jp/members/biju/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1639299533095186435/u_zoWmIW_400x400.jpg"
   },
   {
     "id": "foy",
@@ -1462,7 +1518,8 @@
       "youtube": "https://www.youtube.com/channel/UCDqryKBRB_kh9XJs_uJ_Mtw",
       "twitch": "https://www.twitch.tv/foy_honmono",
       "site": "https://noezfoxx.com/team_detail.html?slug=foy"
-    }
+    },
+    "xAvatar": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png"
   },
   {
     "id": "futon",
@@ -1481,7 +1538,8 @@
       "youtube": "https://www.youtube.com/channel/UCP-YqbjD26y5lPrePpTBrTw",
       "twitch": "https://www.twitch.tv/indegnasen0706",
       "site": "https://dorokusa.co.jp/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1587341318711189504/x0qcEtVX_400x400.jpg"
   },
   {
     "id": "furancisco",
@@ -1502,7 +1560,8 @@
       "youtube": "https://www.youtube.com/channel/UC_VFb6Q52lbZJwTuE8Rb5AA",
       "twitch": "https://www.twitch.tv/franciscoow",
       "site": "https://crazyraccoon.jp/member/francisco/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1505157553637904390/oxS2XF-F_400x400.jpg"
   },
   {
     "id": "bodoka",
@@ -1521,7 +1580,8 @@
       "youtube": "https://www.youtube.com/channel/UCIYaPLvP0y2LbSYk7QbRSmQ",
       "twitch": "https://www.twitch.tv/vodkavdk",
       "site": "https://riddle.info/members/vodka/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1314690370362433536/mKX1VstZ_400x400.jpg"
   },
   {
     "id": "misaco",
@@ -1539,7 +1599,8 @@
       "x": "https://x.com/oOsuyaaaOo",
       "youtube": "https://www.youtube.com/channel/UCPIK9GJ865h6CorqupEq3xA",
       "twitch": "https://www.twitch.tv/misacorin"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1871799396494626816/h2eks7jc_400x400.jpg"
   },
   {
     "id": "myako",
@@ -1558,7 +1619,8 @@
       "youtube": "https://www.youtube.com/channel/UCexnpU3jHQFC2RY3i4ODGVQ",
       "twitch": "https://www.twitch.tv/myakkomyako",
       "site": "https://ppe.jp/talent/myako/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1492153644082286597/sQ1KXQw5_400x400.jpg"
   },
   {
     "id": "yunocy",
@@ -1577,7 +1639,8 @@
       "youtube": "https://www.youtube.com/channel/UC4Aqh8CdHbUOiDTbmhr5N-Q",
       "twitch": "https://www.twitch.tv/yunocy",
       "site": "https://g-starpro.jp/p/Yuno"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1890589745128067072/h-G-ataz_400x400.jpg"
   },
   {
     "id": "yufuna",
@@ -1596,7 +1659,8 @@
       "youtube": "https://www.youtube.com/@yufuna",
       "twitch": "https://www.twitch.tv/yufuna",
       "site": "https://beefreee.jp/blog/yfna/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1490306723462397957/eKxXHP1g_400x400.jpg"
   },
   {
     "id": "yuyuta",
@@ -1615,7 +1679,8 @@
       "youtube": "https://www.youtube.com/channel/UCNMG8dXjgqxS94dHljP9duQ",
       "twitch": "https://www.twitch.tv/yuyuta0702",
       "site": "https://dorokusa.co.jp/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2061742006016339968/JRgTD7Hq_400x400.jpg"
   },
   {
     "id": "euriece",
@@ -1634,7 +1699,8 @@
       "youtube": "https://www.youtube.com/channel/UCURL9cZ7qoSBfm4TW5GHDjw",
       "twitch": "https://www.twitch.tv/euriece",
       "site": "https://reject.jp/member/euriece-streamer/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2023567116142858240/47XOHhmw_400x400.jpg"
   },
   {
     "id": "yoshinama",
@@ -1653,7 +1719,8 @@
       "youtube": "https://www.youtube.com/channel/UCEnkd5D-53MDGpgpiQRbUqw",
       "twitch": "https://www.twitch.tv/yoshinama222",
       "site": "https://uuum.jp/creator/yoshinama"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1386293516507095042/ciHSElw0_400x400.jpg"
   },
   {
     "id": "raijin",
@@ -1673,7 +1740,8 @@
       "x": "https://x.com/Eclair08",
       "youtube": "https://www.youtube.com/channel/UCvXYV_0wzcxMnH_J4HCZxBw",
       "twitch": "https://www.twitch.tv/alfrea"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1429668534280359937/K6syHftU_400x400.jpg"
   },
   {
     "id": "laz",
@@ -1694,7 +1762,8 @@
       "youtube": "https://www.youtube.com/channel/UCqf8Mlsu9tsWigALK2gT-1g",
       "twitch": "https://www.twitch.tv/lazvell",
       "site": "https://zetadivision.com/players/laz"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2012468773358563328/5he0HtmR_400x400.jpg"
   },
   {
     "id": "rasshaa",
@@ -1715,7 +1784,8 @@
       "youtube": "https://www.youtube.com/@rassyach",
       "twitch": "https://www.twitch.tv/rassya12",
       "site": "https://riddle.info/members/%e3%82%89%e3%81%a3%e3%81%97%e3%82%83%e3%83%bc/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1981297198705823744/y0m50Sl1_400x400.jpg"
   },
   {
     "id": "ramu",
@@ -1734,7 +1804,8 @@
       "youtube": "https://www.youtube.com/channel/UCEdiMA-7EUoUzQAXAJDRZUg",
       "twitch": "https://www.twitch.tv/ramuzuqun",
       "site": "https://www.magnify.co.jp/ramu"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1833452733392904192/BGz1_WcC_400x400.jpg"
   },
   {
     "id": "rion",
@@ -1753,7 +1824,8 @@
       "youtube": "https://www.youtube.com/rioncr",
       "twitch": "https://www.twitch.tv/cr_rion",
       "site": "https://crazyraccoon.jp/member/rion/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1985055832560869376/tRIrXgAe_400x400.jpg"
   },
   {
     "id": "waiwai",
@@ -1772,7 +1844,8 @@
       "youtube": "https://www.youtube.com/channel/UCSkLRGGIGKOtinamhcy_42g",
       "twitch": "https://www.twitch.tv/crazyraccoonyy",
       "site": "https://crazyraccoon.jp/member/yy/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1865476004179021824/5W43eJ9a_400x400.jpg"
   },
   {
     "id": "ariken",
@@ -1791,7 +1864,8 @@
       "youtube": "https://www.youtube.com/channel/UC3NHhO0wBaZ5OVxaabcDKrw",
       "twitch": "https://www.twitch.tv/arikendebu",
       "site": "https://riddle.info/members/ariken/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1664201467794964480/owTr8Kq8_400x400.jpg"
   },
   {
     "id": "kizuna",
@@ -1810,7 +1884,8 @@
     "links": {
       "x": "https://x.com/aichan_nel",
       "youtube": "https://www.youtube.com/channel/UC4YaOt1yT-ZeyB0OmxHgolA"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2026978116057653250/dXNg3_2q_400x400.png"
   },
   {
     "id": "killin9hit",
@@ -1829,7 +1904,8 @@
       "youtube": "https://www.youtube.com/@Killin9Hit",
       "twitch": "https://www.twitch.tv/killin9hit",
       "site": "https://zetadivision.com/players/killin9hit"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2012016525772013571/Rhbvjtj__400x400.jpg"
   },
   {
     "id": "kosuke",
@@ -1849,7 +1925,8 @@
       "x": "https://x.com/kosuke_saiore",
       "youtube": "https://www.youtube.com/channel/UCvgmJs0D_D15h1Qz36vWNmQ",
       "twitch": "https://www.twitch.tv/kosuke_saiore"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1599960882783875077/ud9Yd3aK_400x400.jpg"
   },
   {
     "id": "ta1yo",
@@ -1868,7 +1945,8 @@
       "youtube": "https://www.youtube.com/channel/UC8jr3VTOgwtvu-2Pq373k3g",
       "twitch": "https://www.twitch.tv/ta1yo_tv",
       "site": "https://zetadivision.com/players/ta1yo"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2016769587791220737/zwGkcska_400x400.jpg"
   },
   {
     "id": "dasoku",
@@ -1887,7 +1965,8 @@
       "youtube": "https://www.youtube.com/user/dasoku25",
       "twitch": "https://www.twitch.tv/dasoku_aniki",
       "site": "https://uuum.jp/creator/dasoku"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2072539584685391873/5BYd-5qB_400x400.jpg"
   },
   {
     "id": "mother3",
@@ -1905,7 +1984,8 @@
       "x": "https://x.com/mother3rrd",
       "youtube": "https://www.youtube.com/channel/UCXEW13qpntV7pacu0Kz-9yA",
       "twitch": "https://www.twitch.tv/mother3rd"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1929077273015234562/UaEjnc34_400x400.jpg"
   },
   {
     "id": "masuo",
@@ -1926,7 +2006,8 @@
       "youtube": "https://www.youtube.com/channel/UCCUd6vfPvpPHBWZ6XwXAlRQ",
       "twitch": "https://www.twitch.tv/darkmasuotv",
       "site": "https://uuum.jp/creator/masuo"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1027807496839131141/PLcJyZBq_400x400.jpg"
   },
   {
     "id": "yamaton",
@@ -1944,7 +2025,8 @@
       "x": "https://x.com/yamatonjp",
       "youtube": "https://www.youtube.com/@YamatoNjp",
       "twitch": "https://www.twitch.tv/yamatonjp"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1570715338089857024/n3_bkELZ_400x400.jpg"
   },
   {
     "id": "rakshana",
@@ -1964,7 +2046,8 @@
       "x": "https://x.com/rc_rakshaana",
       "youtube": "https://www.youtube.com/channel/UCc7uWNuJOXzzDT-ZV7Gf1dg",
       "site": "https://reject.jp/member/rakushaana/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/2053117894163365888/5gwk2G_k_400x400.jpg"
   },
   {
     "id": "oishi",
@@ -1986,7 +2069,8 @@
       "site": "https://www.014014.jp/",
       "community": "https://club014.jp/",
       "communityLabel": "FC"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1303976976336564225/m_cSVpq__400x400.jpg"
   },
   {
     "id": "ojiji",
@@ -2006,7 +2090,8 @@
       "x": "https://x.com/riteiruozisan",
       "youtube": "https://www.youtube.com/channel/UCuN_uTFuyOqXOOSJqysDHVQ",
       "site": "https://crazyraccoon.jp/"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1798250473562292224/2OjEQhOS_400x400.jpg"
   },
   {
     "id": "yasumoto",
@@ -2027,17 +2112,10 @@
       "site": "https://sigma7.co.jp/actors/yasumoto_hiroki",
       "community": "https://www.openrec.tv/user/yasumoto_hiroki",
       "communityLabel": "OPENREC"
-    }
+    },
+    "xAvatar": "https://pbs.twimg.com/profile_images/1253940815438606336/D6Kbij82_400x400.jpg"
   }
 ];
-
-  const groupMeta = {
-    leaders: { label: "LEADER" },
-    casters: { label: "CASTER" },
-    regulars: { label: "STREAMER" },
-    revengers: { label: "REVENGER" },
-    guests: { label: "GUEST" }
-  };
 
   const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({
     "&": "&amp;",
@@ -2086,12 +2164,20 @@
     ["#9f1239", "#ffe4e6"]
   ];
 
-  const avatarHTML = (name) => {
+  const avatarHTML = (person) => {
+    const name = person.name;
     const hash = Array.from(name).reduce((sum, char) => sum + char.codePointAt(0), 0);
     const [bg, fg] = avatarPalette[hash % avatarPalette.length];
     const cleaned = name.replace(/（.*?）/g, "").replace(/\(.*?\)/g, "").replace(/[@＠].*$/, "").trim();
     const initial = Array.from(cleaned)[0] || "?";
-    return `<div class="avatar" style="--avatar-bg:${bg};--avatar-fg:${fg}" aria-hidden="true">${escapeHTML(initial.toUpperCase())}</div>`;
+    const photo = person.xAvatar
+      ? `<img src="${escapeHTML(person.xAvatar)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">`
+      : "";
+    const avatar = `<div class="avatar" style="--avatar-bg:${bg};--avatar-fg:${fg}" aria-hidden="true"><span class="avatar-initial">${escapeHTML(initial.toUpperCase())}</span>${photo}<span class="avatar-x">X</span></div>`;
+    if (person.links?.x) {
+      return `<a class="avatar-link" href="${escapeHTML(person.links.x)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHTML(name)}のXプロフィール">${avatar}</a>`;
+    }
+    return avatar;
   };
 
   const searchText = (person) => [
@@ -2111,7 +2197,7 @@
     return `
       <article class="person-card ${extraClass}" data-person data-group="${escapeHTML(person.group)}" data-search="${escapeHTML(searchText(person))}">
         <div class="person-head">
-          ${avatarHTML(person.name)}
+          ${avatarHTML(person)}
           <div class="person-title">
             <h3>${escapeHTML(person.name)}</h3>
             <p class="meta">${escapeHTML(person.meta)}</p>
