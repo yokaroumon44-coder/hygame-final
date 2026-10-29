@@ -1,0 +1,2290 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ハイゲ FINAL 2026 出演者まとめ（非公式）</title>
+<meta name="description" content="2026年11月28日・29日に東京ドームで開催される配信者ハイパーゲーム大会 FINAL の出演者を、公式画像・ロゴを使わずにまとめた非公式ファンページです。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f6b5c'/%3E%3Ctext x='32' y='44' font-size='32' font-family='sans-serif' font-weight='900' text-anchor='middle' fill='%23fffdf8'%3EH%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#f5f1e8;
+    --paper-2:#ece5d8;
+    --card:#fffdf8;
+    --ink:#18202b;
+    --muted:#5f6b7a;
+    --muted-2:#3f4a57;
+    --line:#d8d0c2;
+    --line-2:#c7bca9;
+    --accent:#0f6b5c;
+    --accent-2:#c2410c;
+    --accent-3:#a16207;
+    --accent-soft:#e2f1ec;
+    --shadow:0 18px 44px rgba(24,32,43,.08);
+    --radius:18px;
+    --topbar-h:66px;
+    --font-serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;
+    --font-sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,Meiryo,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:var(--font-sans);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+      radial-gradient(900px 500px at 8% 0%,rgba(15,107,92,.07),transparent 60%),
+      radial-gradient(700px 500px at 95% 10%,rgba(194,65,12,.06),transparent 60%),
+      var(--paper);
+    pointer-events:none;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  button,input{font:inherit}
+  button{cursor:pointer}
+  ::selection{background:rgba(15,107,92,.2)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .container{width:min(1160px,calc(100% - 40px));margin:0 auto}
+  .is-hidden{display:none!important}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+  /* top bar */
+  .topbar{
+    position:sticky;
+    top:0;
+    z-index:90;
+    height:var(--topbar-h);
+    background:rgba(245,241,232,.88);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{display:flex;align-items:center;gap:16px;height:100%}
+  .brand{display:flex;align-items:center;gap:10px;min-width:0}
+  .brand-mark{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:34px;height:34px;
+    border-radius:10px;
+    background:var(--accent);
+    color:#fffdf8;
+    font-weight:900;
+    font-size:18px;
+    box-shadow:0 6px 16px rgba(15,107,92,.18);
+  }
+  .brand-text{display:flex;flex-direction:column;line-height:1.15}
+  .brand-text strong{font-size:12.5px;letter-spacing:.08em}
+  .brand-text small{font-size:9.5px;color:var(--muted);letter-spacing:.08em}
+  .nav-links{display:flex;align-items:center;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav-links a{padding:8px 10px;border-radius:999px;font-size:12px;font-weight:700;color:var(--muted);white-space:nowrap;transition:color .2s,background .2s}
+  .nav-links a:hover{color:var(--ink);background:rgba(15,107,92,.07)}
+  .nav-cta{
+    flex:none;
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    padding:8px 13px;
+    border:1px solid rgba(15,107,92,.28);
+    border-radius:999px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    font-size:11.5px;
+    font-weight:800;
+    transition:background .2s,border-color .2s,transform .2s;
+  }
+  .nav-cta:hover{background:#d3ebe3;border-color:rgba(15,107,92,.5);transform:translateY(-1px)}
+
+  /* hero */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(700px 380px at 8% 15%,rgba(255,255,255,.09),transparent 65%),
+      radial-gradient(600px 400px at 88% 0%,rgba(255,196,120,.14),transparent 65%),
+      linear-gradient(135deg,#0a3a33 0%,#102d2b 54%,#1a2028 100%);
+    color:#f8f3e8;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+    background-size:44px 44px;
+    mask-image:linear-gradient(180deg,rgba(0,0,0,.7),transparent 85%);
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.7),transparent 85%);
+    pointer-events:none;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    right:-120px;bottom:-180px;
+    width:520px;height:520px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 0 0 40px rgba(255,255,255,.025),0 0 0 80px rgba(255,255,255,.018);
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:minmax(0,1.35fr) minmax(310px,.65fr);
+    gap:46px;
+    align-items:center;
+    padding:76px 0 82px;
+  }
+  .hero-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:5px 10px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:999px;
+    background:rgba(255,255,255,.06);
+    color:#d9eee8;
+    font-size:10.5px;
+    font-weight:800;
+    letter-spacing:.14em;
+  }
+  .hero-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:#f0b35a;box-shadow:0 0 12px #f0b35a}
+  .hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:16px;
+    padding:5px 10px;
+    border-radius:4px;
+    background:#f0b35a;
+    color:#17221f;
+    font-size:9.5px;
+    font-weight:900;
+    letter-spacing:.13em;
+  }
+  .hero h1{
+    margin:14px 0 2px;
+    font-family:var(--font-serif);
+    font-size:clamp(42px,6.4vw,78px);
+    line-height:1.02;
+    letter-spacing:-.06em;
+    font-weight:900;
+  }
+  .hero h1 span{color:#f0b35a}
+  .hero-sub{
+    margin:0 0 16px;
+    font-family:var(--font-serif);
+    font-size:clamp(20px,2.6vw,30px);
+    font-weight:700;
+    letter-spacing:.08em;
+    color:#d8e8e2;
+  }
+  .hero-lead{max-width:620px;margin:0 0 24px;color:#c7d8d2;font-size:13.5px;line-height:1.9}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:12px 20px;border-radius:999px;font-size:12.5px;font-weight:800;transition:transform .2s,background .2s,border-color .2s,box-shadow .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:#f0b35a;color:#17221f;box-shadow:0 12px 30px rgba(240,179,90,.22)}
+  .btn-primary:hover{background:#ffc978;box-shadow:0 16px 36px rgba(240,179,90,.3)}
+  .btn-ghost{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#edf7f2}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}
+  .hero-notes{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
+  .hero-notes span{padding:4px 9px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:#b9cec8;font-size:9.5px;font-weight:800;letter-spacing:.11em}
+  .hero-side{display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+  .countdown{
+    width:100%;
+    max-width:370px;
+    padding:22px;
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:22px;
+    background:rgba(8,28,26,.55);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+  }
+  .countdown-title{display:flex;justify-content:space-between;gap:8px;margin-bottom:12px;color:#b7ccc6;font-size:9.5px;font-weight:800;letter-spacing:.16em}
+  .countdown-title::after{content:"TOKYO DOME";color:#f0b35a;letter-spacing:.1em}
+  .countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+  .countdown-cell{padding:10px 3px 9px;border:1px solid rgba(255,255,255,.1);border-radius:12px;background:rgba(255,255,255,.045);text-align:center}
+  .countdown-cell strong{display:block;font-family:var(--font-serif);font-size:clamp(23px,3vw,34px);line-height:1.05;font-variant-numeric:tabular-nums;color:#fff8e8;letter-spacing:-.03em}
+  .countdown-cell span{display:block;margin-top:3px;color:#90aaa3;font-size:8px;font-weight:800;letter-spacing:.14em}
+  .countdown-note{display:flex;justify-content:space-between;gap:8px;margin-top:12px;padding-top:11px;border-top:1px solid rgba(255,255,255,.1);color:#a8bdb7;font-size:10px}
+  .countdown-note b{color:#fff3dd}
+  .hero-disclaimer{max-width:370px;color:#8fa9a3;font-size:10px;line-height:1.7;text-align:right}
+
+  /* toolbar */
+  .toolbar{
+    position:sticky;
+    top:var(--topbar-h);
+    z-index:80;
+    background:rgba(245,241,232,.92);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--line);
+  }
+  .toolbar-inner{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 0}
+  .chips{display:flex;align-items:center;gap:5px;overflow-x:auto;scrollbar-width:none;padding:2px}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:none;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:7px 11px;
+    border:1px solid transparent;
+    border-radius:999px;
+    background:transparent;
+    color:var(--muted);
+    font-size:11.5px;
+    font-weight:700;
+    white-space:nowrap;
+    transition:color .2s,background .2s,border-color .2s;
+  }
+  .chip span{min-width:18px;padding:1px 5px;border-radius:999px;background:rgba(24,32,43,.06);color:var(--muted);font-size:9px;text-align:center;font-variant-numeric:tabular-nums}
+  .chip:hover{color:var(--ink);background:rgba(15,107,92,.07)}
+  .chip.is-active{background:var(--accent);color:#fffdf8;box-shadow:0 6px 18px rgba(15,107,92,.18)}
+  .chip.is-active span{background:rgba(255,255,255,.18);color:#fffdf8}
+  .search{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    flex:1 1 230px;
+    max-width:330px;
+    margin-left:auto;
+    padding:0 12px;
+    height:38px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:var(--card);
+    transition:border-color .2s,box-shadow .2s;
+  }
+  .search:focus-within{border-color:rgba(15,107,92,.55);box-shadow:0 0 0 3px rgba(15,107,92,.08)}
+  .search svg{flex:none;width:15px;height:15px;color:#84909f}
+  .search input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:var(--ink);font-size:12px}
+  .search input::placeholder{color:#8b96a4}
+  .search input::-webkit-search-cancel-button{display:none}
+  .clear-search{flex:none;width:21px;height:21px;border:0;border-radius:50%;background:rgba(24,32,43,.08);color:var(--muted-2);font-size:12px;line-height:1}
+  .clear-search:hover{background:rgba(24,32,43,.14)}
+  .result-count{flex:none;color:var(--muted);font-size:10.5px;font-weight:700;letter-spacing:.02em;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .result-count b{color:var(--accent);font-size:12px}
+
+  /* sections */
+  .section{padding:66px 0;border-bottom:1px solid rgba(24,32,43,.07);scroll-margin-top:calc(var(--topbar-h) + 68px)}
+  .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:24px}
+  .section-kicker{display:block;margin-bottom:6px;color:var(--accent-2);font-size:10px;font-weight:900;letter-spacing:.2em}
+  .section-head h2{margin:0 0 7px;font-family:var(--font-serif);font-size:clamp(24px,3.1vw,36px);line-height:1.22;letter-spacing:-.02em}
+  .section-desc{margin:0;max-width:720px;color:var(--muted);font-size:12.5px;line-height:1.8}
+  .inline-link{color:var(--accent);border-bottom:1px solid rgba(15,107,92,.35);font-weight:700;transition:color .2s,border-color .2s}
+  .inline-link:hover{color:var(--accent-2);border-color:var(--accent-2)}
+  .section-count{flex:none;padding:5px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:10.5px;font-weight:700;white-space:nowrap;background:rgba(255,253,248,.5)}
+  .section-count b{color:var(--ink);font-size:12px}
+
+  /* overview */
+  .overview{padding-top:52px}
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+  .stat{position:relative;overflow:hidden;padding:18px 18px 16px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:0 8px 24px rgba(24,32,43,.04)}
+  .stat::after{content:"";position:absolute;right:-28px;bottom:-40px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(15,107,92,.09),transparent 70%)}
+  .stat strong{display:block;font-family:var(--font-serif);font-size:clamp(26px,3.2vw,38px);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+  .stat strong em{font-style:normal;font-family:var(--font-sans);font-size:.4em;color:var(--accent);margin-left:4px;letter-spacing:.06em;vertical-align:middle}
+  .stat span{display:block;margin-top:6px;color:var(--muted);font-size:10.5px;font-weight:700;letter-spacing:.06em}
+  .info-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:12px}
+  .info-card{padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:0 8px 24px rgba(24,32,43,.04)}
+  .info-card h3{margin:0 0 10px;font-size:13px;letter-spacing:.02em}
+  .info-card p{margin:0;color:var(--muted-2);font-size:12px;line-height:1.85}
+  .info-card.highlight{border-color:rgba(194,65,12,.22);background:linear-gradient(160deg,#fff8ef,#fffdf8)}
+  .info-card.highlight h3{color:var(--accent-2)}
+  .info-card.highlight strong{color:var(--ink)}
+  .kv-list{display:grid;gap:8px;margin:0}
+  .kv-list div{display:grid;grid-template-columns:70px 1fr;gap:8px;align-items:start}
+  .kv-list dt{color:#84909f;font-size:10.5px;font-weight:700}
+  .kv-list dd{margin:0;color:var(--ink);font-size:11.5px;font-weight:600}
+  .timeline{display:grid;gap:7px}
+  .timeline-row{display:grid;grid-template-columns:48px 1fr auto;gap:8px;align-items:center;padding:7px 9px;border:1px solid var(--line);border-radius:10px;background:rgba(245,241,232,.55)}
+  .timeline-row .year{color:#84909f;font-size:9.5px;font-weight:800;letter-spacing:.04em}
+  .timeline-row .event{color:var(--ink);font-size:11px;font-weight:700}
+  .timeline-row .result{color:var(--accent-3);font-size:10.5px;font-weight:800;white-space:nowrap}
+  .timeline-row.is-final{border-color:rgba(15,107,92,.25);background:rgba(15,107,92,.06)}
+  .timeline-row.is-final .result{color:var(--accent)}
+  .disclaimer-card{border:1px dashed rgba(24,32,43,.18);background:rgba(255,253,248,.55)}
+  .disclaimer-card h3{color:var(--accent-2)}
+  .disclaimer-card p{font-size:11px;color:var(--muted)}
+  .term-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:14px}
+  .term{padding:14px 15px;border:1px solid var(--line);border-radius:14px;background:rgba(255,253,248,.6)}
+  .term dt{color:var(--accent);font-size:11px;font-weight:900;letter-spacing:.04em}
+  .term dd{margin:3px 0 0;color:var(--muted);font-size:10.5px;line-height:1.65}
+
+  /* cards */
+  .card-grid{display:grid;gap:12px}
+  .leaders-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .casters-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .streamers-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .revengers-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .guests-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+  .person-card{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    padding:16px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    background:var(--card);
+    box-shadow:0 8px 24px rgba(24,32,43,.04);
+    transition:transform .2s,border-color .2s,box-shadow .2s;
+  }
+  .person-card:hover{transform:translateY(-3px);border-color:rgba(15,107,92,.3);box-shadow:var(--shadow)}
+  .person-head{display:flex;align-items:flex-start;gap:11px;flex-wrap:wrap}
+  .avatar{
+    flex:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:54px;height:54px;
+    border-radius:16px;
+    background:var(--avatar-bg);
+    background:linear-gradient(145deg,var(--avatar-bg),color-mix(in srgb,var(--avatar-bg) 70%,#000));
+    color:var(--avatar-fg);
+    font-family:var(--font-serif);
+    font-size:24px;
+    font-weight:900;
+    line-height:1;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.22),0 6px 14px rgba(24,32,43,.12);
+    user-select:none;
+  }
+  .person-title{min-width:0;flex:1 1 140px}
+  .person-title h3{margin:0 0 2px;font-size:16.5px;line-height:1.35;letter-spacing:-.02em;font-weight:900;overflow-wrap:anywhere}
+  .person-title .meta{margin:0;color:var(--accent);font-size:10px;font-weight:700;line-height:1.55;overflow-wrap:anywhere}
+  .person-badge{
+    flex:none;
+    align-self:flex-start;
+    margin-left:auto;
+    padding:3px 7px;
+    border:1px solid rgba(15,107,92,.2);
+    border-radius:999px;
+    background:var(--accent-soft);
+    color:var(--accent);
+    font-size:8.5px;
+    font-weight:900;
+    letter-spacing:.04em;
+    white-space:nowrap;
+  }
+  .person-badge.badge-gold{border-color:rgba(161,98,7,.24);background:#fbf0d7;color:#87510a}
+  .person-badge.badge-pink{border-color:rgba(194,65,12,.24);background:#ffeadf;color:#9a3412}
+  .person-badge.badge-green{border-color:rgba(15,107,92,.24);background:var(--accent-soft);color:var(--accent)}
+  .person-badge.badge-cyan{border-color:rgba(21,94,117,.24);background:#e0f2fe;color:#155e75}
+  .person-card .bio{
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    margin:12px 0 10px;
+    color:var(--muted-2);
+    font-size:11.5px;
+    line-height:1.72;
+  }
+  .person-card .history{display:inline-block;margin-bottom:8px;color:var(--muted);font-size:10px;font-weight:600}
+  .person-card .history::before{content:"HYG";margin-right:5px;color:var(--accent-2);font-size:8.5px;font-weight:900;letter-spacing:.1em}
+  .person-foot{margin-top:auto;padding-top:9px;border-top:1px solid rgba(24,32,43,.08)}
+  .card-links{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0 8px}
+  .card-link{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    padding:4px 7px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:rgba(245,241,232,.55);
+    color:var(--muted-2);
+    font-size:9px;
+    font-weight:700;
+    line-height:1;
+    white-space:nowrap;
+    transition:color .2s,border-color .2s,background .2s,transform .2s;
+  }
+  .card-link svg{width:10px;height:10px;flex:none}
+  .card-link:hover{color:var(--accent);border-color:rgba(15,107,92,.4);background:var(--accent-soft);transform:translateY(-1px)}
+  .card-link.x:hover{color:var(--ink);border-color:rgba(24,32,43,.35);background:rgba(24,32,43,.06)}
+  .card-link.youtube:hover{color:#b91c1c;border-color:rgba(185,28,28,.35);background:#fef2f2}
+  .card-link.twitch:hover{color:#6b21a8;border-color:rgba(107,33,168,.3);background:#faf5ff}
+  .card-link.community:hover{color:#87510a;border-color:rgba(161,98,7,.35);background:#fbf0d7}
+  .tags{display:flex;flex-wrap:wrap;gap:4px}
+  .tag{
+    padding:2px 6px;
+    border:1px solid rgba(15,107,92,.14);
+    border-radius:999px;
+    background:rgba(15,107,92,.045);
+    color:#4b6b63;
+    font-size:8.5px;
+    font-weight:600;
+    line-height:1.6;
+    transition:background .2s,border-color .2s,color .2s;
+  }
+  .tag:hover{background:var(--accent-soft);border-color:rgba(15,107,92,.35);color:var(--accent)}
+  .leader-card{background:linear-gradient(150deg,#fffdf8,#fbf6ea);border-color:rgba(161,98,7,.22)}
+  .leader-card .avatar{width:62px;height:62px;font-size:28px}
+  .leader-card .person-title h3{font-size:21px}
+  .leader-card .person-title .meta{font-size:10.5px}
+  .leader-card .bio{-webkit-line-clamp:4;font-size:12px}
+  .leader-card .history{font-size:10.5px}
+
+  /* guide */
+  .guide-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  .guide-card{position:relative;padding:18px 15px 16px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:0 8px 24px rgba(24,32,43,.04)}
+  .guide-card .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;margin-bottom:11px;border:1px solid rgba(15,107,92,.24);border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:10px;font-weight:900}
+  .guide-card h3{margin:0 0 6px;font-size:12.5px;line-height:1.45}
+  .guide-card p{margin:0;color:var(--muted);font-size:10.5px;line-height:1.72}
+
+  /* empty / footer / to-top */
+  .empty-state{margin:24px 0 0;padding:30px 18px;border:1px dashed var(--line-2);border-radius:var(--radius);background:rgba(255,253,248,.55);text-align:center;color:var(--muted);font-size:12px}
+  .empty-state strong{display:block;margin-bottom:3px;color:var(--ink);font-size:14px}
+  .footer{padding:46px 0 58px;background:#0f2b27;color:#dce9e4}
+  .footer-inner{display:flex;align-items:flex-start;justify-content:space-between;gap:26px;flex-wrap:wrap}
+  .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .footer-brand .brand-mark{background:#f0b35a;color:#17221f;box-shadow:none}
+  .footer-brand strong{font-size:12px;letter-spacing:.08em}
+  .footer p{margin:0;max-width:640px;color:#a9c0b9;font-size:10.5px;line-height:1.9}
+  .footer-links{display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+  .footer-links a{color:#d5e8e2;font-size:11px;font-weight:700;border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:2px}
+  .footer-links a:hover{color:#f0b35a;border-color:#f0b35a}
+  .footer-note{margin-top:22px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);color:#83a39a;font-size:9.5px;line-height:1.85}
+  .to-top{position:fixed;right:18px;bottom:18px;z-index:70;width:42px;height:42px;border:1px solid rgba(15,107,92,.3);border-radius:50%;background:rgba(245,241,232,.9);backdrop-filter:blur(10px);color:var(--accent);font-size:17px;font-weight:900;opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .25s,transform .25s,background .25s}
+  .to-top.is-visible{opacity:1;transform:none;pointer-events:auto}
+  .to-top:hover{background:var(--accent-soft)}
+
+  /* responsive */
+  @media (max-width:1080px){
+    .streamers-grid,.revengers-grid,.casters-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .guide-grid{grid-template-columns:repeat(3,1fr)}
+    .info-grid{grid-template-columns:1fr 1fr}
+    .info-card.highlight{grid-column:1 / -1}
+    .term-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;gap:28px;padding:62px 0 70px}
+    .hero-side{align-items:flex-start}
+    .countdown{max-width:420px}
+    .hero-disclaimer{text-align:left;max-width:420px}
+    .nav-links{display:none}
+    .nav-cta{margin-left:auto}
+    .leaders-grid{grid-template-columns:1fr}
+    .guests-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .stat-grid{grid-template-columns:repeat(2,1fr)}
+    .search{max-width:none;flex-basis:100%;order:5}
+    .result-count{order:6;margin-left:auto}
+  }
+  @media (max-width:620px){
+    :root{--topbar-h:58px}
+    .container{width:min(100% - 26px,1160px)}
+    .brand-text strong{font-size:11px}
+    .brand-text small{font-size:8.5px}
+    .hero-inner{padding:48px 0 56px}
+    .hero h1{font-size:clamp(38px,12vw,56px)}
+    .hero-sub{font-size:18px}
+    .hero-lead{font-size:12.5px}
+    .hero-actions{gap:8px}
+    .btn{padding:10px 15px;font-size:11.5px}
+    .countdown{padding:16px}
+    .section{padding:48px 0;scroll-margin-top:calc(var(--topbar-h) + 112px)}
+    .section-head{flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:18px}
+    .section-count{align-self:flex-start}
+    .streamers-grid,.revengers-grid,.casters-grid,.guests-grid,.leaders-grid{grid-template-columns:1fr}
+    .person-card{padding:14px}
+    .person-head{gap:9px}
+    .avatar{width:46px;height:46px;border-radius:13px;font-size:20px}
+    .person-title h3{font-size:15px}
+    .person-title .meta{font-size:9.5px}
+    .person-card .bio{-webkit-line-clamp:4;font-size:11px}
+    .person-badge{font-size:8px;padding:2px 6px}
+    .guide-grid{grid-template-columns:1fr}
+    .info-grid{grid-template-columns:1fr}
+    .info-card.highlight{grid-column:auto}
+    .term-grid{grid-template-columns:1fr}
+    .timeline-row{grid-template-columns:44px 1fr;gap:5px}
+    .timeline-row .result{grid-column:2;justify-self:start}
+    .toolbar-inner{gap:8px;padding:9px 0}
+    .chips{width:100%;flex-wrap:wrap;overflow:visible;gap:4px}
+    .chip{padding:6px 9px;font-size:10px;gap:5px}
+    .chip span{min-width:16px;font-size:8.5px}
+    .search{flex-basis:100%;order:5;max-width:none;height:36px}
+    .result-count{order:6;margin-left:auto;font-size:10px}
+    .card-link{font-size:8.5px;padding:4px 6px;min-height:26px}
+    .card-link svg{width:9px;height:9px}
+    .tag{font-size:9px;padding:3px 7px;min-height:24px}
+    .footer-inner{flex-direction:column}
+    .footer-links{flex-direction:row;flex-wrap:wrap;gap:12px}
+    .to-top{right:13px;bottom:13px;width:38px;height:38px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  }
+
+  /* print */
+  @page{margin:12mm}
+  @media print{
+    :root{--paper:#fff;--ink:#111;--muted:#444;--muted-2:#222;--line:#ddd;--line-2:#ccc;--card:#fff}
+    body{background:#fff;color:#111}
+    body::before,.topbar,.hero,.toolbar,.to-top,.section-count,.footer-links,.empty-state{display:none!important}
+    .container{width:100%}
+    .section{padding:16px 0;border-color:#ddd;break-inside:avoid;scroll-margin-top:0}
+    .section-head{margin-bottom:12px}
+    .section-kicker{color:#555}
+    .section-desc{color:#333}
+    .stat-grid,.info-grid,.guide-grid,.term-grid{display:none!important}
+    .streamers-grid,.revengers-grid,.casters-grid{grid-template-columns:repeat(3,1fr)}
+    .leaders-grid,.guests-grid{grid-template-columns:repeat(2,1fr)}
+    .person-card{background:#fff;border:1px solid #ddd;box-shadow:none;break-inside:avoid;transform:none!important}
+    .avatar{box-shadow:none}
+    .person-card .bio{color:#333;-webkit-line-clamp:unset;display:block}
+    .person-title h3,.person-title .meta,.history,.card-link,.tag{color:#222}
+    .card-link,.tag{border-color:#ccc;background:#f5f5f5}
+    .footer{background:#fff;color:#222;padding:16px 0}
+    .footer p,.footer-note{color:#555}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="#top" aria-label="ページ上部へ">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span class="brand-text"><strong>HYG FINAL 2026</strong><small>非公式まとめ</small></span>
+    </a>
+    <nav class="nav-links" aria-label="ページ内メニュー">
+      <a href="#overview">概要</a>
+      <a href="#leaders">リーダー</a>
+      <a href="#casters">実況</a>
+      <a href="#roster">出演者</a>
+      <a href="#revengers">リベンジャーズ</a>
+      <a href="#guests">ゲスト</a>
+      <a href="#guide">楽しみ方</a>
+    </nav>
+    <a class="nav-cta" href="https://lp.openrec.jp/hyper-game-event-final/" target="_blank" rel="noopener noreferrer">公式サイト ↗</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="hero-eyebrow"><span class="dot" aria-hidden="true"></span>2026.11.28 SAT — 11.29 SUN / TOKYO DOME</div>
+        <div class="hero-badge">UNOFFICIAL FAN SUMMARY / 非公式</div>
+        <h1 id="hero-title">ハイゲ <span>FINAL</span></h1>
+        <p class="hero-sub">出演者まとめ</p>
+        <p class="hero-lead">現地で「この人誰？」とならないための、非公式の出演者ガイド。公式画像・ロゴは使用していません。名前・所属・経歴・リンクを、公開情報をもとにまとめています。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#roster">出演者を見る <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-ghost" href="https://lp.openrec.jp/hyper-game-event-final/" target="_blank" rel="noopener noreferrer">公式サイト ↗</a>
+        </div>
+        <div class="hero-notes" aria-label="大会の特徴">
+          <span>4 TEAMS</span><span>40+ STREAMERS</span><span>8 GAMES</span><span>2 DAYS</span>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="countdown" aria-label="開演までのカウントダウン">
+          <div class="countdown-title">OPENING COUNTDOWN</div>
+          <div class="countdown-grid">
+            <div class="countdown-cell"><strong id="cd-days">--</strong><span>DAYS</span></div>
+            <div class="countdown-cell"><strong id="cd-hours">--</strong><span>HOURS</span></div>
+            <div class="countdown-cell"><strong id="cd-minutes">--</strong><span>MINUTES</span></div>
+            <div class="countdown-cell"><strong id="cd-seconds">--</strong><span>SECONDS</span></div>
+          </div>
+          <div class="countdown-note"><span>DAY1 <b>11.28 SAT</b> 14:30開演</span><span>DAY2 <b>11.29 SUN</b> 13:00開演</span></div>
+        </div>
+        <p class="hero-disclaimer">本ページはOPENREC・出演者・各団体とは関係のない非公式ファンページです。公式画像・ロゴは使用していません。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="toolbar" id="toolbar">
+    <div class="container toolbar-inner">
+      <div class="chips" role="group" aria-label="出演者の絞り込み">
+        <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">すべて <span>62</span></button>
+        <button class="chip" type="button" data-filter="leaders" aria-pressed="false">リーダー <span>4</span></button>
+        <button class="chip" type="button" data-filter="casters" aria-pressed="false">実況 <span>5</span></button>
+        <button class="chip" type="button" data-filter="regulars" aria-pressed="false">レギュラー <span>40</span></button>
+        <button class="chip" type="button" data-filter="revengers" aria-pressed="false">リベンジャーズ <span>10</span></button>
+        <button class="chip" type="button" data-filter="guests" aria-pressed="false">ゲスト <span>3</span></button>
+      </div>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        <span class="sr-only">出演者を検索</span>
+        <input id="searchInput" type="search" placeholder="名前・所属・タグで検索" autocomplete="off">
+        <button class="clear-search" id="clearSearch" type="button" aria-label="検索をクリア" hidden>×</button>
+      </label>
+      <div class="result-count" id="resultCount" aria-live="polite"><b>62</b>名を表示</div>
+    </div>
+  </div>
+
+  <section class="section overview" id="overview" data-section-group="overview">
+    <div class="container">
+      <div class="stat-grid">
+        <div class="stat"><strong>4<em>TEAMS</em></strong><span>チーム対抗戦</span></div>
+        <div class="stat"><strong>40<em>+</em></strong><span>出演ストリーマー</span></div>
+        <div class="stat"><strong>8<em>GAMES</em></strong><span>競技種目（予定）</span></div>
+        <div class="stat"><strong>2<em>DAYS</em></strong><span>東京ドーム開催</span></div>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>開催概要</h3>
+          <dl class="kv-list">
+            <div><dt>日程</dt><dd>2026年11月28日(土)・29日(日)</dd></div>
+            <div><dt>会場</dt><dd>東京ドーム</dd></div>
+            <div><dt>DAY1</dt><dd>開場12:30 / 開演14:30 / 終演予定21:00</dd></div>
+            <div><dt>DAY2</dt><dd>開場11:00 / 開演13:00 / 終演予定19:30</dd></div>
+            <div><dt>ドラフト</dt><dd>11月19日(木) 20:00〜</dd></div>
+          </dl>
+        </div>
+        <div class="info-card">
+          <h3>過去大会</h3>
+          <div class="timeline">
+            <div class="timeline-row"><span class="year">2023</span><span class="event">第1回 / 幕張メッセ</span><span class="result">SHAKA 優勝</span></div>
+            <div class="timeline-row"><span class="year">2024</span><span class="event">第2回 / Kアリーナ横浜</span><span class="result">もこう 優勝</span></div>
+            <div class="timeline-row is-final"><span class="year">2026</span><span class="event">FINAL / 東京ドーム</span><span class="result">？</span></div>
+          </div>
+        </div>
+        <div class="info-card highlight">
+          <h3>DAY1最下位→優勝のジンクス</h3>
+          <p>第1回はSHAKAチーム、第2回はもこうチームが、ともに<strong>DAY1終了時点の最下位から逆転優勝</strong>。今年もDAY1の順位だけで諦めるのは早いかもしれません。</p>
+        </div>
+      </div>
+      <div class="info-grid" style="margin-top:12px">
+        <div class="info-card disclaimer-card">
+          <h3>このページについて</h3>
+          <p>本ページは非公式のファンまとめです。OPENREC、出演者、所属団体とは関係ありません。公式画像・ロゴは使用していません。掲載情報は2026年10月29日時点の公開情報をもとにしています。</p>
+        </div>
+        <div class="info-card">
+          <h3>はじめての人へ</h3>
+          <dl class="term-grid">
+            <div class="term"><dt>ハイゲ</dt><dd>配信者ハイパーゲーム大会の通称。</dd></div>
+            <div class="term"><dt>ドラフト</dt><dd>4人のリーダーがチームを編成する会議。</dd></div>
+            <div class="term"><dt>裏ハイパー</dt><dd>DAY1夜の恒例企画。今回はぷよテト再戦も。</dd></div>
+            <div class="term"><dt>リベンジャーズ</dt><dd>追加参戦組。出番は当日まで不明。</dd></div>
+          </dl>
+        </div>
+        <div class="info-card">
+          <h3>リンクについて</h3>
+          <p>各カードのX・YouTube・Twitch・公式リンクは、本人・所属の公式アカウント／公式サイト等へのリンクです。リンク先の内容は各運営者の管理になります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="leaders" data-section-group="leaders">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">LEADERS</span>
+          <h2>チームリーダー</h2>
+          <p class="section-desc">4人がドラフトでチームを編成し、2日間のポイントを競う。第1回王者SHAKA、第2回王者もこう、復帰の関優太、無冠のk4senという因縁の面子。</p>
+        </div>
+        <span class="section-count"><b>4</b>名</span>
+      </div>
+      <div class="card-grid leaders-grid" id="leadersGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="casters" data-section-group="casters">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">MAIN CASTER</span>
+          <h2>実況・MC</h2>
+          <p class="section-desc">大会の熱を言葉で届ける面々。加藤純一はMr.HYGとして、OooDa・岸大河・平岩康佑・石田晴香とともに2日間を進行する。</p>
+        </div>
+        <span class="section-count"><b>5</b>名</span>
+      </div>
+      <div class="card-grid casters-grid" id="castersGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="roster" data-section-group="regulars">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">STREAMERS</span>
+          <h2>レギュラー出演者</h2>
+          <p class="section-desc">ドラフト候補となる40人。FPSの実力者、任天堂タイトルの実況者、バラエティ勢、VTuber、コスプレイヤーまで、ジャンルはさまざま。チームは11月19日のドラフトで決定。カードのタグをクリックすると、同じタグの人だけに絞り込めます。</p>
+        </div>
+        <span class="section-count"><b>40</b>名</span>
+      </div>
+      <div class="card-grid streamers-grid" id="streamersGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="revengers" data-section-group="revengers">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">HYG REVENGERS</span>
+          <h2>ハイゲリベンジャーズ</h2>
+          <p class="section-desc">追加参戦の10人。どの競技に出るかは当日まで不明で、本人たちも知らされていないとのこと。出番そのものがお楽しみ。</p>
+        </div>
+        <span class="section-count"><b>10</b>名</span>
+      </div>
+      <div class="card-grid revengers-grid" id="revengersGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="guests" data-section-group="guests">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">SPECIAL GUEST</span>
+          <h2>特別ゲスト</h2>
+          <p class="section-desc">オープニングを彩るアニソンシンガー、因縁の再戦相手、そして影ナレーション。大会を外側から盛り上げる面々。</p>
+        </div>
+        <span class="section-count"><b>3</b>名</span>
+      </div>
+      <div class="card-grid guests-grid" id="guestsGrid"></div>
+      <p class="section-desc" style="margin-top:16px">※テーマソング「HYPER!!」はオーイシマサヨシ feat. シャウトマン（Gero）名義。Geroの<a class="inline-link" href="https://x.com/Gero2525" target="_blank" rel="noopener noreferrer">X</a> / <a class="inline-link" href="https://www.youtube.com/channel/UCFuugQScqDfJcsOEWbL1_tg" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="guide" data-section-group="guide">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-kicker">WATCH GUIDE</span>
+          <h2>初見でも楽しむための5つのポイント</h2>
+          <p class="section-desc">全員の経歴を覚えなくても大丈夫。この5つだけ押さえれば、現地の空気をかなり楽しめます。</p>
+        </div>
+      </div>
+      <div class="guide-grid">
+        <div class="guide-card"><span class="num">01</span><h3>ドラフト後に推しチームを決める</h3><p>11月19日20:00のドラフトでチームが確定。誰がどのリーダーと組むかを見てから応援するチームを決めると、2日間の物語が追いやすくなります。</p></div>
+        <div class="guide-card"><span class="num">02</span><h3>DAY1の順位で諦めない</h3><p>過去2回とも、DAY1終了時点の最下位が最終的に優勝。DAY1で負けているチームこそ、DAY2の逆転劇に注目です。</p></div>
+        <div class="guide-card"><span class="num">03</span><h3>リーダーの因縁を楽しむ</h3><p>SHAKAは2冠、もこうは連覇、関優太は2年半ぶり復帰、k4senは初戴冠。4人それぞれの背景を知るだけで、試合の意味が変わります。</p></div>
+        <div class="guide-card"><span class="num">04</span><h3>裏ハイゲのぷよテト再戦</h3><p>加藤純一 vs Crazy Raccoon代表・おじじの「ぷよぷよテトリス2」再戦。2025年VERSUSの大将戦の因縁が、FINALで再び。</p></div>
+        <div class="guide-card"><span class="num">05</span><h3>オープニングの生歌と双眼鏡</h3><p>テーマソング「HYPER!!」をオーイシマサヨシ feat. シャウトマン（Gero）がオープニングで歌唱。東京ドームは広いので、選手の実物を追うなら双眼鏡があると便利です。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="empty-state" id="emptyState" hidden>
+      <strong>該当する出演者が見つかりませんでした</strong>
+      名前の一部や所属名、タグを変えて検索してみてください。
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">H</span>
+          <strong>HYG FINAL 2026 / 非公式まとめ</strong>
+        </div>
+        <p>本ページは、2026年11月28日・29日に東京ドームで開催される「配信者ハイパーゲーム大会 FINAL」の出演者を個人用にまとめた非公式ファンページです。OPENREC、出演者、所属団体とは関係ありません。公式画像・ロゴは使用していません。掲載情報は2026年10月29日時点の公開情報をもとにしています。</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://lp.openrec.jp/hyper-game-event-final/" target="_blank" rel="noopener noreferrer">公式サイト ↗</a>
+        <a href="https://x.com/hypergameinfo" target="_blank" rel="noopener noreferrer">公式X ↗</a>
+        <a href="https://prtimes.jp/main/html/rd/p/000000104.000115510.html" target="_blank" rel="noopener noreferrer">出演者発表リリース ↗</a>
+      </div>
+    </div>
+    <div class="footer-note">
+      人物名・大会名・商標等の権利は各権利者に帰属します。掲載内容に誤りがある場合や、リンクの修正・削除を希望される場合は、公式サイトの窓口ではなく、このページの管理者までご連絡ください。チーム分けは11月19日(木)20:00のドラフトで発表予定です。
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="ページ上部へ">↑</button>
+
+<script>
+  const people = [
+  {
+    "id": "k4sen",
+    "name": "k4sen",
+    "group": "leaders",
+    "role": "TEAM k4sen リーダー",
+    "meta": "ZETA DIVISION / コンテンツクリエイター",
+    "bio": "CoD実況・キャスター出身。LoL大会「The k4sen」など冠企画を主催し、FPSからLoLまで幅広く配信。長時間の企画で生まれる仲間との掛け合いが見どころ。",
+    "history": "第1回 2位 / 第2回 3位",
+    "badge": "初戴冠なるか",
+    "badgeClass": "badge-cyan",
+    "tags": [
+      "リーダー",
+      "LoL",
+      "FPS",
+      "企画"
+    ],
+    "links": {
+      "x": "https://x.com/k4sen",
+      "youtube": "https://www.youtube.com/channel/UChUjERVG8eKEAJSCef-tTmg",
+      "twitch": "https://www.twitch.tv/k4sen",
+      "site": "https://zetadivision.com/players/k4sen"
+    }
+  },
+  {
+    "id": "shaka",
+    "name": "SHAKA",
+    "group": "leaders",
+    "role": "TEAM SHAKA リーダー",
+    "meta": "ZETA DIVISION / ストリーマー",
+    "bio": "プロゲーマー出身でFPS全般に精通。大型コラボサーバー企画の中心人物として国内Twitchシーンを牽引。第1回王者として2冠目を狙う。",
+    "history": "第1回 優勝 / 第2回 最下位",
+    "badge": "SEASON 1 CHAMPION",
+    "badgeClass": "badge-gold",
+    "tags": [
+      "リーダー",
+      "FPS",
+      "APEX",
+      "ZETA"
+    ],
+    "links": {
+      "x": "https://x.com/avashaka",
+      "youtube": "https://www.youtube.com/channel/UCjg5-lUiUzdmzzBRY9Xqrhw",
+      "twitch": "https://www.twitch.tv/fps_shaka",
+      "site": "https://zetadivision.com/players/shaka"
+    }
+  },
+  {
+    "id": "mokou",
+    "name": "もこう",
+    "group": "leaders",
+    "role": "TEAM もこう リーダー",
+    "meta": "ゲーム実況者 / ぷよぷよ元プロ",
+    "bio": "「厨ポケ狩り講座」で一時代を築いたベテラン。独特の「王」キャラと語録、感情的なプレイで人気。第2回王者として連覇ならず、FINALで有終の美を狙う。",
+    "history": "第1回 最下位 / 第2回 優勝",
+    "badge": "SEASON 2 CHAMPION",
+    "badgeClass": "badge-gold",
+    "tags": [
+      "リーダー",
+      "ポケモン",
+      "ぷよぷよ",
+      "実況"
+    ],
+    "links": {
+      "x": "https://x.com/mokouliszt",
+      "youtube": "https://www.youtube.com/channel/UCENoC6MLc4pL-vehJyzSWmg",
+      "twitch": "https://www.twitch.tv/mokouliszt1",
+      "site": "https://dorokusa.co.jp/"
+    }
+  },
+  {
+    "id": "seki",
+    "name": "関優太",
+    "group": "leaders",
+    "role": "TEAM 関優太 リーダー",
+    "meta": "ストリーマー / 元プロゲーマー",
+    "bio": "APEXやタルコフなどFPS中心の長時間配信でTwitch上位。率直な語り口で愛される。第2回は活動休止で不在、FINALは2年半ぶりの復帰。",
+    "history": "第1回 3位 / 第2回 欠場",
+    "badge": "FINAL RETURN",
+    "badgeClass": "badge-pink",
+    "tags": [
+      "リーダー",
+      "FPS",
+      "APEX",
+      "タルコフ"
+    ],
+    "links": {
+      "x": "https://x.com/stylishnoob",
+      "youtube": "https://www.youtube.com/channel/UC2j4lymo8Ce_1RXMeo4afcQ",
+      "twitch": "https://www.twitch.tv/stylishnoob4"
+    }
+  },
+  {
+    "id": "kato",
+    "name": "加藤純一",
+    "group": "casters",
+    "meta": "Mr.HYG / チェアマン",
+    "bio": "ハイゲの生みの親。国内トップクラスの同時視聴者数を集めるベテラン配信者で、企画力と体当たりの実況で大規模イベントを牽引。",
+    "history": "第1回・第2回 チェアマン",
+    "badge": "MR.HYG",
+    "badgeClass": "badge-cyan",
+    "tags": [
+      "MC",
+      "実況",
+      "企画"
+    ],
+    "links": {
+      "x": "https://x.com/unkochan1234567",
+      "youtube": "https://www.youtube.com/channel/UCx1nAvtVDIsaGmCMSe8ofsQ",
+      "twitch": "https://www.twitch.tv/kato_junichi0817",
+      "site": "https://www.murash.jp/talent/katou_junichi-2/"
+    }
+  },
+  {
+    "id": "oooda",
+    "name": "OooDa",
+    "group": "casters",
+    "meta": "eスポーツキャスター",
+    "bio": "FPS中心に大会実況と番組MCを担当。PUBGやVALORANTなど50タイトル以上の競技シーンをカバーし、対談企画「1on1」も手がける。",
+    "history": "第1回から実況解説",
+    "tags": [
+      "実況",
+      "FPS",
+      "MC"
+    ],
+    "links": {
+      "x": "https://x.com/OooDa",
+      "youtube": "https://www.youtube.com/channel/UChiEaapLE92m5sCV7oGG6IA",
+      "twitch": "https://www.twitch.tv/oooda",
+      "site": "https://gloe.jp/cast/oooda/"
+    }
+  },
+  {
+    "id": "kishi",
+    "name": "岸大河",
+    "group": "casters",
+    "meta": "ゲームキャスター / Protagon代表",
+    "bio": "大会実況・MCを担いながら、Protagon株式会社の代表取締役も務める。競技を言葉で整理する実況に定評。",
+    "history": "第1回から実況解説",
+    "tags": [
+      "実況",
+      "MC",
+      "経営"
+    ],
+    "links": {
+      "x": "https://x.com/StanSmith_jp",
+      "twitch": "https://www.twitch.tv/stansmith_jp",
+      "site": "https://protagon.co.jp/"
+    }
+  },
+  {
+    "id": "hiraiwa",
+    "name": "平岩康佑",
+    "group": "casters",
+    "meta": "eスポーツ実況者 / 元ABCアナウンサー",
+    "bio": "元朝日放送アナウンサー。プロ野球・高校野球で培った実況をRAGE、CRカップ、ALGSなどeスポーツへ。SF6の実況音声も担当。",
+    "history": "第1回から実況解説",
+    "tags": [
+      "実況",
+      "アナウンサー",
+      "SF6"
+    ],
+    "links": {
+      "x": "https://x.com/kouhiraiwa777",
+      "youtube": "https://www.youtube.com/channel/UCWRv0opKmUbsNmcjwRtfC0w",
+      "site": "https://www.odyssey-esports.com/"
+    }
+  },
+  {
+    "id": "ishida",
+    "name": "石田晴香",
+    "group": "casters",
+    "meta": "タレント / 声優 / 元AKB48",
+    "bio": "ゲーム・アニメ分野の番組MCと声優活動を続ける。芸能人女子eスポーツ大会ではチーム「ホリッち」のキャプテンを務めた。",
+    "history": "第1回からアシスタントMC",
+    "tags": [
+      "MC",
+      "声優",
+      "タレント"
+    ],
+    "links": {
+      "x": "https://x.com/can2525can",
+      "site": "https://www.horipro.co.jp/ishidaharuka/"
+    }
+  },
+  {
+    "id": "akami",
+    "name": "赤見かるび",
+    "group": "regulars",
+    "meta": "Crazy Raccoon / VTuber",
+    "bio": "2021年デビューのVTuber。あどけない声とVALORANT・OW・SF6の腕前のギャップで人気。Twitch女性ストリーマー視聴時間世界1位の経験も。",
+    "history": "初の本戦出場",
+    "badge": "初出場",
+    "badgeClass": "badge-green",
+    "tags": [
+      "VTuber",
+      "FPS",
+      "SF6",
+      "CR"
+    ],
+    "links": {
+      "x": "https://x.com/AkamiKarubi",
+      "youtube": "https://www.youtube.com/channel/UCWV9E1l5YItrPEAWHoNmieQ",
+      "twitch": "https://www.twitch.tv/akamikarubi",
+      "site": "https://crazyraccoon.jp/member/akami-karubi/"
+    }
+  },
+  {
+    "id": "assari",
+    "name": "あっさりしょこ",
+    "group": "regulars",
+    "meta": "Dead by Daylight",
+    "bio": "Dead by Daylightのやり込みで知られるストリーマー。豊富な知識に基づくプレイと落ち着いた実況で、非対称対戦ゲームのファンから支持。",
+    "history": "3回連続出場",
+    "tags": [
+      "DBD",
+      "ホラー",
+      "実況"
+    ],
+    "links": {
+      "x": "https://x.com/Saaanjjiii",
+      "youtube": "https://www.youtube.com/channel/UCz0aC9z3kXruRHULDqFRuVA",
+      "twitch": "https://www.twitch.tv/assarisyoko1"
+    }
+  },
+  {
+    "id": "amatsuki",
+    "name": "天月",
+    "group": "regulars",
+    "meta": "Crazy Raccoon / 歌い手・アーティスト",
+    "bio": "歌い手・アーティストとして音楽を届けながら、FPSでも高ランクを維持。澄んだ歌声と仲間と競う熱量の二刀流。",
+    "history": "3回連続出場",
+    "tags": [
+      "音楽",
+      "FPS",
+      "CR"
+    ],
+    "links": {
+      "x": "https://x.com/_amatsuki_",
+      "youtube": "https://www.youtube.com/channel/UCY_10f4ef0e1T2skAbHBQTg",
+      "twitch": "https://www.twitch.tv/cr_amatsuki",
+      "site": "https://crazyraccoon.jp/member/sushimaster/",
+      "community": "https://twitcasting.tv/_amatsuki_",
+      "communityLabel": "ツイキャス"
+    }
+  },
+  {
+    "id": "ayutaro",
+    "name": "あゆたろう",
+    "group": "regulars",
+    "meta": "TRAPEZISTE / 元NGT48",
+    "bio": "元NGT48・中村歩加。タレントとストリーマーの二足のわらじで、Twitchで毎日ゲーム配信。Splatoon3やVALORANTを好む。",
+    "history": "初出場",
+    "badge": "初出場",
+    "badgeClass": "badge-green",
+    "tags": [
+      "タレント",
+      "スプラ",
+      "VALORANT"
+    ],
+    "links": {
+      "x": "https://x.com/ayutaro_728",
+      "youtube": "https://www.youtube.com/@ayutaroch",
+      "twitch": "https://www.twitch.tv/ayutarochan",
+      "site": "https://trapeziste-creative.com/model/ayuka/"
+    }
+  },
+  {
+    "id": "iori",
+    "name": "伊織もえ",
+    "group": "regulars",
+    "meta": "コスプレイヤー / ストリーマー",
+    "bio": "コスプレイヤー、グラビアアイドル、ストリーマーとして活動。雑誌表紙は150冊超。配信では雑談やゲームを届ける。",
+    "history": "3回連続出場",
+    "tags": [
+      "コスプレ",
+      "グラビア",
+      "雑談"
+    ],
+    "links": {
+      "x": "https://x.com/moe_five",
+      "youtube": "https://www.youtube.com/c/iorimoe",
+      "twitch": "https://www.twitch.tv/moe_iori"
+    }
+  },
+  {
+    "id": "enako",
+    "name": "えなこ",
+    "group": "regulars",
+    "meta": "コスプレイヤー / タレント",
+    "bio": "日本を代表するコスプレイヤー。ゲーム配信も行い、Overwatch 2のチーム戦イベント「えなこカップ」を主催。",
+    "history": "3回連続出場",
+    "tags": [
+      "コスプレ",
+      "OW",
+      "タレント"
+    ],
+    "links": {
+      "x": "https://x.com/enako_cos",
+      "youtube": "https://www.youtube.com/channel/UCrUdiKv9LERZmG_MKh63Xgg",
+      "twitch": "https://www.twitch.tv/enako_chan",
+      "site": "https://ppe.jp/talent/enako/"
+    }
+  },
+  {
+    "id": "oniya",
+    "name": "おにや",
+    "group": "regulars",
+    "meta": "DOROKUSA / シャドウバース元プロ",
+    "bio": "シャドウバースのプロ選手としての経歴を持ち、REJECTではシャドウバース部門のヘッドを担当。ゆるい空気の実況で人気。",
+    "history": "3回連続出場",
+    "tags": [
+      "シャドバ",
+      "カードゲーム",
+      "実況"
+    ],
+    "links": {
+      "x": "https://x.com/oniyanogame",
+      "youtube": "https://www.youtube.com/channel/UCLiQ--EXgzUV03q5jKQYWcw",
+      "twitch": "https://www.twitch.tv/oniyadayo",
+      "site": "https://reject.jp/member/o-228/"
+    }
+  },
+  {
+    "id": "kyoichiro",
+    "name": "恭一郎",
+    "group": "regulars",
+    "meta": "ベテランストリーマー",
+    "bio": "長い配信歴を持つベテラン。飾らない雑談と気ままなゲーム配信で、幅広い層の視聴者にくつろいだ時間を届ける。",
+    "history": "3回連続出場",
+    "tags": [
+      "雑談",
+      "ベテラン"
+    ],
+    "links": {
+      "x": "https://x.com/kyouitirou2525",
+      "youtube": "https://www.youtube.com/channel/UClX3YSREJp3ELuv2wFAYOzA",
+      "twitch": "https://www.twitch.tv/dmf_kyochan",
+      "site": "https://uuum.jp/creator/kyo_channel"
+    }
+  },
+  {
+    "id": "kenki",
+    "name": "けんき",
+    "group": "regulars",
+    "meta": "ストリーマー / 元Fortniteプロ",
+    "bio": "Fortniteのプロシーンで名を馳せたストリーマー。GTAロールプレイや大型コラボ企画への参加など、幅広い舞台で活躍。",
+    "history": "3回連続出場",
+    "tags": [
+      "Fortnite",
+      "GTA RP",
+      "FPS"
+    ],
+    "links": {
+      "x": "https://x.com/T_kenki",
+      "youtube": "https://www.youtube.com/channel/UCNicQVuAQJYlCQKEw1TKn1A",
+      "twitch": "https://www.twitch.tv/kenki521"
+    }
+  },
+  {
+    "id": "kokunii",
+    "name": "こく兄",
+    "group": "regulars",
+    "meta": "REJECT / ストリーマー",
+    "bio": "格闘ゲームを中心とした実況で知られ、ドラクエなど大型タイトルの初見プレイもじっくり配信。",
+    "history": "3回連続出場",
+    "tags": [
+      "格ゲー",
+      "RPG",
+      "REJECT"
+    ],
+    "links": {
+      "x": "https://x.com/kokujind",
+      "youtube": "https://www.youtube.com/channel/UCcO-FDMK_mPWEnoxyNDwvNw",
+      "twitch": "https://www.twitch.tv/kokujintv",
+      "site": "https://reject.jp/member/kokunii/"
+    }
+  },
+  {
+    "id": "gocchan",
+    "name": "ごっちゃん@マイキー",
+    "group": "regulars",
+    "meta": "Crazy Raccoon / ストリーマー",
+    "bio": "2010年から活動する16年のベテラン。GTA RP「ストグラ」のギャングのボス／個人医として人気。名前の「マイキー」は肩にいるキャラ。",
+    "history": "初出場",
+    "badge": "初出場",
+    "badgeClass": "badge-green",
+    "tags": [
+      "GTA RP",
+      "ストグラ",
+      "CR"
+    ],
+    "links": {
+      "x": "https://x.com/_GocChaN_",
+      "youtube": "https://www.youtube.com/channel/UCgFKdFutAhwsWSoeZ6zXJrg",
+      "twitch": "https://www.twitch.tv/gocchanmikey",
+      "site": "https://crazyraccoon.jp/member/gocchanmikey/"
+    }
+  },
+  {
+    "id": "shibuya",
+    "name": "渋谷ハル",
+    "group": "regulars",
+    "meta": "ネオポルテ / VTuber",
+    "bio": "APEXの実力者として知られるVTuber。大規模大会「VTuber最協決定戦」の主催・運営も務め、麻雀や格闘ゲームにも造詣。",
+    "history": "3回連続出場",
+    "tags": [
+      "VTuber",
+      "APEX",
+      "大会主催"
+    ],
+    "links": {
+      "x": "https://x.com/ShibuyaHAL",
+      "youtube": "https://www.youtube.com/channel/UChLfthKoUV502J7gU9STArg",
+      "twitch": "https://www.twitch.tv/shibuyahal",
+      "site": "https://neo-porte.jp/member/shibuya-hal"
+    }
+  },
+  {
+    "id": "shinji",
+    "name": "しんじさん",
+    "group": "regulars",
+    "meta": "ストリーマー",
+    "bio": "ジャンルを問わずゲームを探し、初見からクリアまで試行錯誤する配信が持ち味。高難度・新作・対戦まで幅広く触れる。",
+    "history": "初出場",
+    "badge": "初出場",
+    "badgeClass": "badge-green",
+    "tags": [
+      "初見",
+      "高難度",
+      "RPG"
+    ],
+    "links": {
+      "x": "https://x.com/Shinjisan_XD",
+      "youtube": "https://www.youtube.com/channel/UCo9ioj4sW3BmxSDizpdT6Gw",
+      "twitch": "https://www.twitch.tv/shinjifromjapanxd",
+      "site": "https://riddle.info/members/shinjisan/"
+    }
+  },
+  {
+    "id": "suzuki",
+    "name": "鈴木ノリアキ",
+    "group": "regulars",
+    "meta": "ZETA DIVISION / ストリーマー",
+    "bio": "ユーモアあふれるトークと企画で知られる。GTA RPでも存在感を発揮し、ゲーム配信を独自のノリで盛り上げる。",
+    "history": "2大会連続出場",
+    "tags": [
+      "トーク",
+      "GTA RP",
+      "ZETA"
+    ],
+    "links": {
+      "x": "https://x.com/NORIAKIISGOOD",
+      "youtube": "https://www.youtube.com/@NORIAKIISGOOD",
+      "twitch": "https://www.twitch.tv/suzukinoriaki",
+      "site": "https://zetadivision.com/players/%e9%88%b4%e6%9c%a8%e3%83%8e%e3%83%aa%e3%82%a2%e3%82%ad"
+    }
+  },
+  {
+    "id": "stanmi",
+    "name": "スタンミじゃぱん",
+    "group": "regulars",
+    "meta": "ストリーマー / LoL",
+    "bio": "LoLを軸に活動するストリーマー。体当たりの検証企画や旅動画など、行動力のある企画屋として人気。",
+    "history": "3回連続出場",
+    "tags": [
+      "LoL",
+      "企画",
+      "旅"
+    ],
+    "links": {
+      "x": "https://x.com/sutanmiJPN",
+      "youtube": "https://www.youtube.com/channel/UCcGSTI830YkwaocFV31Q7MA",
+      "twitch": "https://www.twitch.tv/sutanmi",
+      "site": "https://tsubasa-records.co.jp/sutanmi-japan/"
+    }
+  },
+  {
+    "id": "spygea",
+    "name": "SPYGEA",
+    "group": "regulars",
+    "meta": "ベテランFPSストリーマー",
+    "bio": "FPS黎明期から活動するベテラン。プロゲーマー出身の経験に裏打ちされたトークと、勢いのあるリアクションで長年愛される。",
+    "history": "3回連続出場",
+    "tags": [
+      "FPS",
+      "ベテラン",
+      "リアクション"
+    ],
+    "links": {
+      "x": "https://x.com/spygea_jp",
+      "youtube": "https://www.youtube.com/channel/UCBnFEiB9v4afsg8tbhmIACQ",
+      "twitch": "https://www.twitch.tv/spygea"
+    }
+  },
+  {
+    "id": "sumomo",
+    "name": "すもも",
+    "group": "regulars",
+    "meta": "DetonatioN FocusMe / スプラトゥーン",
+    "bio": "スプラトゥーンの実力者として知られるストリーマー。対戦配信を中心にコアなファンを持ち、チーム戦での勝負強さが魅力。",
+    "history": "3回連続出場",
+    "tags": [
+      "スプラ",
+      "対戦",
+      "DFM"
+    ],
+    "links": {
+      "x": "https://x.com/SUMOMOXqX",
+      "youtube": "https://www.youtube.com/channel/UC38hCsF3st1pBJBw8JnAu2g",
+      "twitch": "https://www.twitch.tv/sumomo_x",
+      "site": "https://team-detonation.net/team/member/sumomoxqx"
+    }
+  },
+  {
+    "id": "zerost",
+    "name": "Zerost",
+    "group": "regulars",
+    "meta": "REJECT / ストリーマー",
+    "bio": "オーバーウォッチやスプラトゥーンを題材に、ほぼ毎日の配信と視聴者参加型の企画でコミュニティを育てる。",
+    "history": "初出場",
+    "badge": "初出場",
+    "badgeClass": "badge-green",
+    "tags": [
+      "OW",
+      "スプラ",
+      "REJECT"
+    ],
+    "links": {
+      "x": "https://x.com/Zerost_s",
+      "youtube": "https://www.youtube.com/channel/UCBtAasNQYblmWPx1R77tcEA",
+      "twitch": "https://www.twitch.tv/zerost_s",
+      "site": "https://reject.jp/member/zerost/"
+    }
+  },
+  {
+    "id": "taiji",
+    "name": "たいじ",
+    "group": "regulars",
+    "meta": "REJECT / スプラトゥーン",
+    "bio": "スプラトゥーンの最上位プレイヤーとして名を馳せ、ストリートファイター6など対戦ゲーム全般でも実力派。",
+    "history": "3回連続出場",
+    "tags": [
+      "スプラ",
+      "SF6",
+      "REJECT"
+    ],
+    "links": {
+      "x": "https://x.com/taijich0324",
+      "youtube": "https://www.youtube.com/channel/UCTrckUWmmrRZcNrfu1mZDOg",
+      "twitch": "https://www.twitch.tv/yaritaiji",
+      "site": "https://reject.jp/member/taiji/"
+    }
+  },
+  {
+    "id": "bakumatsu",
+    "name": "幕末志士・坂本",
+    "group": "regulars",
+    "meta": "幕末志士 / ゲーム実況",
+    "bio": "ゲーム実況グループ「幕末志士」（坂本と中岡）の坂本。ラジオのような掛け合いトークと任天堂タイトルの実況で長年親しまれる。",
+    "history": "初の本戦出場",
+    "badge": "初の本戦",
+    "badgeClass": "badge-green",
+    "tags": [
+      "任天堂",
+      "トーク",
+      "実況"
+    ],
+    "links": {
+      "x": "https://x.com/kirizaki_ei",
+      "youtube": "https://www.youtube.com/channel/UC0C6oq3TlGiSlDCei57hY6A",
+      "twitch": "https://www.twitch.tv/bakumatsu_shishi"
+    }
+  },
+  {
+    "id": "batora",
+    "name": "バトラ",
+    "group": "regulars",
+    "meta": "ストリーマー / スプラトゥーン・マリオ",
+    "bio": "スプラトゥーンやマリオ系タイトルの実況で知られる。動画実況出身のテンポの良いトークで、幅広い年齢層に親しまれる。",
+    "history": "初出場",
+    "badge": "初出場",
+    "badgeClass": "badge-green",
+    "tags": [
+      "スプラ",
+      "マリオ",
+      "実況"
+    ],
+    "links": {
+      "x": "https://x.com/batora324",
+      "youtube": "https://www.youtube.com/channel/UC67WMeSJs-HwKb-pCN6Z63Q",
+      "twitch": "https://www.twitch.tv/batora324"
+    }
+  },
+  {
+    "id": "hiiragi",
+    "name": "柊ツルギ",
+    "group": "regulars",
+    "meta": "ネオポルテ / VTuber",
+    "bio": "長時間・高頻度の配信で知られるVTuber。オーバーウォッチなどのFPSからバラエティ企画まで、勢いのあるエンタメ配信を届ける。",
+    "history": "初の本戦出場",
+    "badge": "初の本戦",
+    "badgeClass": "badge-green",
+    "tags": [
+      "VTuber",
+      "OW",
+      "バラエティ"
+    ],
+    "links": {
+      "x": "https://x.com/HiiragiTsurugi",
+      "youtube": "https://www.youtube.com/channel/UCWnQDjlXTLDyYowc3LaHyJQ",
+      "twitch": "https://www.twitch.tv/hiiragitsurugi",
+      "site": "https://neo-porte.jp/member/hiiragi-tsurugi"
+    }
+  },
+  {
+    "id": "biju",
+    "name": "Biju",
+    "group": "regulars",
+    "meta": "MURASH GAMING / VALORANT",
+    "bio": "VALORANT部門の選手として活動しながら、パワプロやネタゲームまで幅広く配信。飾らないスタイルが持ち味。",
+    "history": "初出場",
+    "badge": "初出場",
+    "badgeClass": "badge-green",
+    "tags": [
+      "VALORANT",
+      "パワプロ",
+      "FPS"
+    ],
+    "links": {
+      "x": "https://x.com/Biju_valo",
+      "youtube": "https://www.youtube.com/channel/UCelyu3V0ml45H3Ulm8RaaDw",
+      "twitch": "https://www.twitch.tv/bijusan",
+      "site": "https://murashgaming.co.jp/members/biju/"
+    }
+  },
+  {
+    "id": "foy",
+    "name": "Foy（DJふぉい）",
+    "group": "regulars",
+    "meta": "ストリーマー / 音楽・VALORANT",
+    "bio": "ゲーム、音楽、トークを横断するストリーマー。VALORANTの「ダイヤへの道」や対談、心霊スポット、AI企画などに挑戦。",
+    "history": "3回連続出場",
+    "tags": [
+      "VALORANT",
+      "音楽",
+      "企画"
+    ],
+    "links": {
+      "x": "https://x.com/DJ_Foy_jp",
+      "youtube": "https://www.youtube.com/channel/UCDqryKBRB_kh9XJs_uJ_Mtw",
+      "twitch": "https://www.twitch.tv/foy_honmono",
+      "site": "https://noezfoxx.com/team_detail.html?slug=foy"
+    }
+  },
+  {
+    "id": "futon",
+    "name": "布団ちゃん",
+    "group": "regulars",
+    "meta": "ストリーマー / 雑談・料理",
+    "bio": "雑談と料理配信を看板とするストリーマー。落ち着いた語り口と生活感のある配信スタイルで、Minecraft実況でも人気。",
+    "history": "3回連続出場",
+    "tags": [
+      "雑談",
+      "料理",
+      "マイクラ"
+    ],
+    "links": {
+      "x": "https://x.com/indegnasen210",
+      "youtube": "https://www.youtube.com/channel/UCP-YqbjD26y5lPrePpTBrTw",
+      "twitch": "https://www.twitch.tv/indegnasen0706",
+      "site": "https://dorokusa.co.jp/"
+    }
+  },
+  {
+    "id": "furancisco",
+    "name": "ふらんしすこ",
+    "group": "regulars",
+    "meta": "Crazy Raccoon / ストリーマー",
+    "bio": "オーバーウォッチやカードゲームをTwitchでほぼ毎日配信。気さくなトークと安定した配信ペースが持ち味。",
+    "history": "初の本戦出場",
+    "badge": "初の本戦",
+    "badgeClass": "badge-green",
+    "tags": [
+      "OW",
+      "カードゲーム",
+      "CR"
+    ],
+    "links": {
+      "x": "https://x.com/Franciscooo_T",
+      "youtube": "https://www.youtube.com/channel/UC_VFb6Q52lbZJwTuE8Rb5AA",
+      "twitch": "https://www.twitch.tv/franciscoow",
+      "site": "https://crazyraccoon.jp/member/francisco/"
+    }
+  },
+  {
+    "id": "bodoka",
+    "name": "ボドカ",
+    "group": "regulars",
+    "meta": "RIDDLE ORDER / オーナー兼ストリーマー",
+    "bio": "プロゲーミングチームRIDDLE ORDERのオーナー兼ストリーマー。VALORANTを中心に、大会・コラボ企画でも存在感を放つ。",
+    "history": "3回連続出場",
+    "tags": [
+      "VALORANT",
+      "RIDDLE",
+      "経営"
+    ],
+    "links": {
+      "x": "https://x.com/VodkaChaso",
+      "youtube": "https://www.youtube.com/channel/UCIYaPLvP0y2LbSYk7QbRSmQ",
+      "twitch": "https://www.twitch.tv/vodkavdk",
+      "site": "https://riddle.info/members/vodka/"
+    }
+  },
+  {
+    "id": "misaco",
+    "name": "misaco",
+    "group": "regulars",
+    "meta": "コスプレイヤー / ストリーマー",
+    "bio": "Twitchで雑談やAPEX、VALORANT、FF14を配信するコスプレイヤー。Overwatchイベント出演やゲーム関連Vlogも。",
+    "history": "3回連続出場",
+    "tags": [
+      "コスプレ",
+      "APEX",
+      "FF14"
+    ],
+    "links": {
+      "x": "https://x.com/oOsuyaaaOo",
+      "youtube": "https://www.youtube.com/channel/UCPIK9GJ865h6CorqupEq3xA",
+      "twitch": "https://www.twitch.tv/misacorin"
+    }
+  },
+  {
+    "id": "myako",
+    "name": "みゃこ",
+    "group": "regulars",
+    "meta": "ストリーマー / 雑談・シャドウバース",
+    "bio": "深夜の雑談を軸に、コミケの振り返りや仲間との企画を飾らない言葉で届ける。Shadowverse: Worlds BeyondのCRリーグ観戦も。",
+    "history": "3回連続出場",
+    "tags": [
+      "雑談",
+      "シャドバ",
+      "コミケ"
+    ],
+    "links": {
+      "x": "https://x.com/myakkomyako",
+      "youtube": "https://www.youtube.com/channel/UCexnpU3jHQFC2RY3i4ODGVQ",
+      "twitch": "https://www.twitch.tv/myakkomyako",
+      "site": "https://ppe.jp/talent/myako/"
+    }
+  },
+  {
+    "id": "yunocy",
+    "name": "yunocy",
+    "group": "regulars",
+    "meta": "G-STAR.PRO / ストリーマー",
+    "bio": "音楽ゲームとFPS、お酒を愛するまったりした配信スタイル。落ち着いた時間を届ける。",
+    "history": "3回連続出場",
+    "tags": [
+      "音ゲー",
+      "FPS",
+      "お酒"
+    ],
+    "links": {
+      "x": "https://x.com/mizuyuno_",
+      "youtube": "https://www.youtube.com/channel/UC4Aqh8CdHbUOiDTbmhr5N-Q",
+      "twitch": "https://www.twitch.tv/yunocy",
+      "site": "https://g-starpro.jp/p/Yuno"
+    }
+  },
+  {
+    "id": "yufuna",
+    "name": "ゆふな",
+    "group": "regulars",
+    "meta": "JOZ / ストリーマー",
+    "bio": "APEXを中心とした動画投稿と配信で、FPSファンのコミュニティを広げる。",
+    "history": "3回連続出場",
+    "tags": [
+      "APEX",
+      "FPS",
+      "JOZ"
+    ],
+    "links": {
+      "x": "https://x.com/_YFNA",
+      "youtube": "https://www.youtube.com/@yufuna",
+      "twitch": "https://www.twitch.tv/yufuna",
+      "site": "https://beefreee.jp/blog/yfna/"
+    }
+  },
+  {
+    "id": "yuyuta",
+    "name": "ゆゆうた",
+    "group": "regulars",
+    "meta": "ストリーマー / ピアニスト",
+    "bio": "ピアノ演奏の動画・配信で名を馳せたストリーマー。即興演奏と歯に衣着せぬ雑談、体当たりのゲーム実況を織り交ぜる。",
+    "history": "3回連続出場",
+    "tags": [
+      "ピアノ",
+      "雑談",
+      "バラエティ"
+    ],
+    "links": {
+      "x": "https://x.com/dai2noyuyuta",
+      "youtube": "https://www.youtube.com/channel/UCNMG8dXjgqxS94dHljP9duQ",
+      "twitch": "https://www.twitch.tv/yuyuta0702",
+      "site": "https://dorokusa.co.jp/"
+    }
+  },
+  {
+    "id": "euriece",
+    "name": "Euriece",
+    "group": "regulars",
+    "meta": "REJECT / APEX Legends",
+    "bio": "APEXの国内トップ層として知られた実力者。高いエイム力を活かしたFPS配信で、チームメイトとのコラボも多い。",
+    "history": "3回連続出場",
+    "tags": [
+      "APEX",
+      "FPS",
+      "REJECT"
+    ],
+    "links": {
+      "x": "https://x.com/realeuriece",
+      "youtube": "https://www.youtube.com/channel/UCURL9cZ7qoSBfm4TW5GHDjw",
+      "twitch": "https://www.twitch.tv/euriece",
+      "site": "https://reject.jp/member/euriece-streamer/"
+    }
+  },
+  {
+    "id": "yoshinama",
+    "name": "よしなま",
+    "group": "regulars",
+    "meta": "ストリーマー / モンハン・アクション",
+    "bio": "ゲームへの深い愛を公言するストリーマー。モンスターハンターなどのアクションゲームを、大きなリアクションと共に実況。",
+    "history": "3回連続出場",
+    "tags": [
+      "モンハン",
+      "アクション",
+      "実況"
+    ],
+    "links": {
+      "x": "https://x.com/yosi980",
+      "youtube": "https://www.youtube.com/channel/UCEnkd5D-53MDGpgpiQRbUqw",
+      "twitch": "https://www.twitch.tv/yoshinama222",
+      "site": "https://uuum.jp/creator/yoshinama"
+    }
+  },
+  {
+    "id": "raijin",
+    "name": "らいじん",
+    "group": "regulars",
+    "meta": "ストリーマー / LoL",
+    "bio": "LoLのイレリア一筋で知られるストリーマー。一つのチャンピオンを極めるプレイスタイルで、MOBAファンから根強い支持。",
+    "history": "初の本戦出場",
+    "badge": "初の本戦",
+    "badgeClass": "badge-green",
+    "tags": [
+      "LoL",
+      "イレリア",
+      "MOBA"
+    ],
+    "links": {
+      "x": "https://x.com/Eclair08",
+      "youtube": "https://www.youtube.com/channel/UCvXYV_0wzcxMnH_J4HCZxBw",
+      "twitch": "https://www.twitch.tv/alfrea"
+    }
+  },
+  {
+    "id": "laz",
+    "name": "Laz",
+    "group": "regulars",
+    "meta": "ZETA DIVISION / VALORANTプロ",
+    "bio": "日本VALORANTシーンを代表するZETA DIVISIONのプロ選手。配信ではポケモンやスプラトゥーンなども交え、マイペースな一面も。",
+    "history": "初出場",
+    "badge": "初出場",
+    "badgeClass": "badge-green",
+    "tags": [
+      "VALORANT",
+      "プロ",
+      "ZETA"
+    ],
+    "links": {
+      "x": "https://x.com/lazvell",
+      "youtube": "https://www.youtube.com/channel/UCqf8Mlsu9tsWigALK2gT-1g",
+      "twitch": "https://www.twitch.tv/lazvell",
+      "site": "https://zetadivision.com/players/laz"
+    }
+  },
+  {
+    "id": "rasshaa",
+    "name": "らっしゃー",
+    "group": "regulars",
+    "meta": "RIDDLE ORDER / ストリーマー",
+    "bio": "「楽しくゲーム」をモットーに、コメントとの気軽なやり取りを大切にした配信を届ける。",
+    "history": "初の本戦出場",
+    "badge": "初の本戦",
+    "badgeClass": "badge-green",
+    "tags": [
+      "FPS",
+      "RIDDLE",
+      "雑談"
+    ],
+    "links": {
+      "x": "https://x.com/rassya_taisyo",
+      "youtube": "https://www.youtube.com/@rassyach",
+      "twitch": "https://www.twitch.tv/rassya12",
+      "site": "https://riddle.info/members/%e3%82%89%e3%81%a3%e3%81%97%e3%82%83%e3%83%bc/"
+    }
+  },
+  {
+    "id": "ramu",
+    "name": "RaMu",
+    "group": "regulars",
+    "meta": "マグニファイエンタテインメント / タレント",
+    "bio": "YouTubeとTwitchでゲームや雑談を配信。ぽこあポケモンの12時間企画、Subnautica 2のコラボ、Shadowverse大会などに挑戦。",
+    "history": "3回連続出場",
+    "tags": [
+      "タレント",
+      "雑談",
+      "映画"
+    ],
+    "links": {
+      "x": "https://x.com/dpandaramu",
+      "youtube": "https://www.youtube.com/channel/UCEdiMA-7EUoUzQAXAJDRZUg",
+      "twitch": "https://www.twitch.tv/ramuzuqun",
+      "site": "https://www.magnify.co.jp/ramu"
+    }
+  },
+  {
+    "id": "rion",
+    "name": "rion",
+    "group": "regulars",
+    "meta": "Crazy Raccoon / ストリーマー",
+    "bio": "FPSを中心としたゲーム配信で、チームメイトとのコラボや大会企画にも幅広く参加する。",
+    "history": "2大会連続出場",
+    "tags": [
+      "FPS",
+      "CR",
+      "コラボ"
+    ],
+    "links": {
+      "x": "https://x.com/R_7qq",
+      "youtube": "https://www.youtube.com/rioncr",
+      "twitch": "https://www.twitch.tv/cr_rion",
+      "site": "https://crazyraccoon.jp/member/rion/"
+    }
+  },
+  {
+    "id": "waiwai",
+    "name": "わいわい",
+    "group": "regulars",
+    "meta": "Crazy Raccoon / ゲーム実況者",
+    "bio": "バカゲーからホラーまで幅広いジャンルを実況。リアクションの大きさと企画力で人気を集める。",
+    "history": "2大会連続出場",
+    "tags": [
+      "バカゲー",
+      "ホラー",
+      "CR"
+    ],
+    "links": {
+      "x": "https://x.com/ABCDYY",
+      "youtube": "https://www.youtube.com/channel/UCSkLRGGIGKOtinamhcy_42g",
+      "twitch": "https://www.twitch.tv/crazyraccoonyy",
+      "site": "https://crazyraccoon.jp/member/yy/"
+    }
+  },
+  {
+    "id": "ariken",
+    "name": "ありけん",
+    "group": "revengers",
+    "meta": "RIDDLE / ストリーマー",
+    "bio": "大人数のゲーム大会企画や体を張った企画動画で人気。第2回は恭一郎の代打でDAY1に参加した。",
+    "history": "第2回出場",
+    "tags": [
+      "企画",
+      "RIDDLE",
+      "大会"
+    ],
+    "links": {
+      "x": "https://x.com/guraburuslot777",
+      "youtube": "https://www.youtube.com/channel/UC3NHhO0wBaZ5OVxaabcDKrw",
+      "twitch": "https://www.twitch.tv/arikendebu",
+      "site": "https://riddle.info/members/ariken/"
+    }
+  },
+  {
+    "id": "kizuna",
+    "name": "キズナアイ",
+    "group": "revengers",
+    "meta": "VTuber / A.I.Channel",
+    "bio": "バーチャルタレントの草分けとして知られる。歌やダンス、コラボ企画を中心に活動。",
+    "history": "初出演",
+    "badge": "初出演",
+    "badgeClass": "badge-green",
+    "tags": [
+      "VTuber",
+      "歌",
+      "草分け"
+    ],
+    "links": {
+      "x": "https://x.com/aichan_nel",
+      "youtube": "https://www.youtube.com/channel/UC4YaOt1yT-ZeyB0OmxHgolA"
+    }
+  },
+  {
+    "id": "killin9hit",
+    "name": "Killin9Hit",
+    "group": "revengers",
+    "meta": "ZETA DIVISION / ストリーマー",
+    "bio": "FPSを中心としたゲーム配信で、落ち着いたプレイと安定した配信ペースが持ち味。",
+    "history": "第2回出場",
+    "tags": [
+      "FPS",
+      "ZETA",
+      "配信"
+    ],
+    "links": {
+      "x": "https://x.com/killin9hit",
+      "youtube": "https://www.youtube.com/@Killin9Hit",
+      "twitch": "https://www.twitch.tv/killin9hit",
+      "site": "https://zetadivision.com/players/killin9hit"
+    }
+  },
+  {
+    "id": "kosuke",
+    "name": "こーすけ",
+    "group": "revengers",
+    "meta": "最終兵器俺達 / ストリーマー",
+    "bio": "パルワールドやスプラトゥーンなど幅広いタイトルを扱い、YouTubeの動画投稿とTwitchの生配信を並行。",
+    "history": "初出演",
+    "badge": "初出演",
+    "badgeClass": "badge-green",
+    "tags": [
+      "パルワールド",
+      "スプラ",
+      "配信"
+    ],
+    "links": {
+      "x": "https://x.com/kosuke_saiore",
+      "youtube": "https://www.youtube.com/channel/UCvgmJs0D_D15h1Qz36vWNmQ",
+      "twitch": "https://www.twitch.tv/kosuke_saiore"
+    }
+  },
+  {
+    "id": "ta1yo",
+    "name": "ta1yo",
+    "group": "revengers",
+    "meta": "ZETA DIVISION / 元OWLプロ",
+    "bio": "オーバーウォッチリーグ世界王者の経歴を持つ元プロ選手。FPSの解説的な実況と英語力を活かした配信が持ち味。",
+    "history": "第2回出場",
+    "tags": [
+      "OWL",
+      "FPS",
+      "ZETA"
+    ],
+    "links": {
+      "x": "https://x.com/ta1yo_tv",
+      "youtube": "https://www.youtube.com/channel/UC8jr3VTOgwtvu-2Pq373k3g",
+      "twitch": "https://www.twitch.tv/ta1yo_tv",
+      "site": "https://zetadivision.com/players/ta1yo"
+    }
+  },
+  {
+    "id": "dasoku",
+    "name": "蛇足",
+    "group": "revengers",
+    "meta": "UUUM / ストリーマー",
+    "bio": "歌い手としての活動歴を持ち、MinecraftやOverwatchの実況に怪談や雑談を交えた配信を届ける。",
+    "history": "第1回・第2回出場",
+    "tags": [
+      "歌い手",
+      "マイクラ",
+      "OW"
+    ],
+    "links": {
+      "x": "https://x.com/dasoku_youtube",
+      "youtube": "https://www.youtube.com/user/dasoku25",
+      "twitch": "https://www.twitch.tv/dasoku_aniki",
+      "site": "https://uuum.jp/creator/dasoku"
+    }
+  },
+  {
+    "id": "mother3",
+    "name": "まざー3（mother3rd）",
+    "group": "revengers",
+    "meta": "ストリーマー / VALORANT",
+    "bio": "VALORANT好きを公言するストリーマー。飾らないおじさんキャラクターと安定した配信ペースで幅広い層に人気。",
+    "history": "第2回出場",
+    "tags": [
+      "VALORANT",
+      "おじさん",
+      "配信"
+    ],
+    "links": {
+      "x": "https://x.com/mother3rrd",
+      "youtube": "https://www.youtube.com/channel/UCXEW13qpntV7pacu0Kz-9yA",
+      "twitch": "https://www.twitch.tv/mother3rd"
+    }
+  },
+  {
+    "id": "masuo",
+    "name": "Masuo",
+    "group": "revengers",
+    "meta": "ベテランクリエイター",
+    "bio": "動画黎明期から活動するベテラン。ゲーム実況ではパワプロやシャドバなどを扱い、穏やかな人柄のにじむ配信で親しまれる。",
+    "history": "初出演",
+    "badge": "初出演",
+    "badgeClass": "badge-green",
+    "tags": [
+      "パワプロ",
+      "シャドバ",
+      "ベテラン"
+    ],
+    "links": {
+      "x": "https://x.com/masuotv",
+      "youtube": "https://www.youtube.com/channel/UCCUd6vfPvpPHBWZ6XwXAlRQ",
+      "twitch": "https://www.twitch.tv/darkmasuotv",
+      "site": "https://uuum.jp/creator/masuo"
+    }
+  },
+  {
+    "id": "yamaton",
+    "name": "YamatoN",
+    "group": "revengers",
+    "meta": "REJECT / ストリーマー",
+    "bio": "FPSの競技シーンで培った経験と的確な状況分析が持ち味。APEXを中心とした配信で長年支持を集める。",
+    "history": "第1回・第2回出場",
+    "tags": [
+      "APEX",
+      "FPS",
+      "REJECT"
+    ],
+    "links": {
+      "x": "https://x.com/yamatonjp",
+      "youtube": "https://www.youtube.com/@YamatoNjp",
+      "twitch": "https://www.twitch.tv/yamatonjp"
+    }
+  },
+  {
+    "id": "rakshana",
+    "name": "ラクシャーナ",
+    "group": "revengers",
+    "meta": "REJECT / VTuber",
+    "bio": "シャドウバースを中心にカードゲームの配信で活動するVTuber。",
+    "history": "初出演",
+    "badge": "初出演",
+    "badgeClass": "badge-green",
+    "tags": [
+      "VTuber",
+      "シャドバ",
+      "REJECT"
+    ],
+    "links": {
+      "x": "https://x.com/rc_rakshaana",
+      "youtube": "https://www.youtube.com/channel/UCc7uWNuJOXzzDT-ZV7Gf1dg",
+      "site": "https://reject.jp/member/rakushaana/"
+    }
+  },
+  {
+    "id": "oishi",
+    "name": "オーイシマサヨシ",
+    "group": "guests",
+    "meta": "アニソンシンガー",
+    "bio": "「君じゃなきゃダメみたい」などで知られるアニソンシンガー。加藤純一と「ドラゴンエネルギー」を制作した縁も。FINALテーマ曲「HYPER!!」をオープニングで歌唱。",
+    "history": "テーマソング",
+    "badge": "OPENING LIVE",
+    "badgeClass": "badge-gold",
+    "tags": [
+      "アニソン",
+      "主題歌",
+      "ライブ"
+    ],
+    "links": {
+      "x": "https://x.com/Masayoshi_Oishi",
+      "youtube": "https://www.youtube.com/channel/UC6FmznwRG0CpdjtNyHucmTA",
+      "site": "https://www.014014.jp/",
+      "community": "https://club014.jp/",
+      "communityLabel": "FC"
+    }
+  },
+  {
+    "id": "ojiji",
+    "name": "おじじ",
+    "group": "guests",
+    "meta": "Crazy Raccoon 代表取締役 / 高野大知",
+    "bio": "CRを国内最大級のeスポーツチームに育てた人物。2025年のVERSUSでは加藤純一とぷよぷよテトリス2の大将戦を戦った。FINALで再戦。",
+    "history": "ぷよテト再戦",
+    "badge": "REMATCH",
+    "badgeClass": "badge-pink",
+    "tags": [
+      "CR",
+      "ぷよテト",
+      "再戦"
+    ],
+    "links": {
+      "x": "https://x.com/riteiruozisan",
+      "youtube": "https://www.youtube.com/channel/UCuN_uTFuyOqXOOSJqysDHVQ",
+      "site": "https://crazyraccoon.jp/"
+    }
+  },
+  {
+    "id": "yasumoto",
+    "name": "安元洋貴",
+    "group": "guests",
+    "meta": "声優",
+    "bio": "数多くのアニメ・ゲーム作品に出演する声優。加藤純一とは10年来の付き合いで、FINALでは影ナレーションを担当。",
+    "history": "影ナレーション",
+    "badge": "NARRATION",
+    "badgeClass": "badge-cyan",
+    "tags": [
+      "声優",
+      "影ナレ",
+      "ナレーション"
+    ],
+    "links": {
+      "x": "https://x.com/__yasumoto__",
+      "site": "https://sigma7.co.jp/actors/yasumoto_hiroki",
+      "community": "https://www.openrec.tv/user/yasumoto_hiroki",
+      "communityLabel": "OPENREC"
+    }
+  }
+];
+
+  const groupMeta = {
+    leaders: { label: "LEADER" },
+    casters: { label: "CASTER" },
+    regulars: { label: "STREAMER" },
+    revengers: { label: "REVENGER" },
+    guests: { label: "GUEST" }
+  };
+
+  const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  }[char]));
+
+  const linkIcons = {
+    x: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.3l-4.9-6.4L6.2 22H3l7.3-8.4L1.5 2h6.4l4.4 5.8L18.9 2Zm-1.1 18h1.7L6.3 3.9H4.5L17.8 20Z"/></svg>',
+    youtube: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>',
+    twitch: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2 2 6v14h5v3h4l3-3h4l4-4V2H4Zm16 12-3 3h-5l-3 3v-3H5V4h15v10Z"/><path d="M11 7h2v6h-2zM16 7h2v6h-2z"/></svg>',
+    site: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z"/></svg>',
+    community: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>'
+  };
+
+  const linkDefs = [
+    { key: "x", label: "X", className: "x" },
+    { key: "youtube", label: "YouTube", className: "youtube" },
+    { key: "twitch", label: "Twitch", className: "twitch" },
+    { key: "site", label: "公式", className: "site" },
+    { key: "community", label: "コミュニティ", className: "community" }
+  ];
+
+  const linksHTML = (person) => {
+    const links = person.links || {};
+    const items = linkDefs
+      .filter((def) => links[def.key])
+      .map((def) => {
+        const label = def.key === "community" ? (links.communityLabel || def.label) : def.label;
+        const labelHTML = def.key === "x" ? "" : `<span>${escapeHTML(label)}</span>`;
+        return `<a class="card-link ${def.className}" href="${escapeHTML(links[def.key])}" target="_blank" rel="noopener noreferrer" title="${escapeHTML(label)}" aria-label="${escapeHTML(person.name)}の${escapeHTML(label)}">${linkIcons[def.key]}${labelHTML}</a>`;
+      });
+    return items.length ? `<div class="card-links">${items.join("")}</div>` : "";
+  };
+
+  const avatarPalette = [
+    ["#0f6b5c", "#d9f3ea"],
+    ["#9a3412", "#ffedd5"],
+    ["#1e40af", "#dbeafe"],
+    ["#831843", "#fce7f3"],
+    ["#3f6212", "#ecfccb"],
+    ["#5b21b6", "#ede9fe"],
+    ["#155e75", "#cffafe"],
+    ["#9f1239", "#ffe4e6"]
+  ];
+
+  const avatarHTML = (name) => {
+    const hash = Array.from(name).reduce((sum, char) => sum + char.codePointAt(0), 0);
+    const [bg, fg] = avatarPalette[hash % avatarPalette.length];
+    const cleaned = name.replace(/（.*?）/g, "").replace(/\(.*?\)/g, "").replace(/[@＠].*$/, "").trim();
+    const initial = Array.from(cleaned)[0] || "?";
+    return `<div class="avatar" style="--avatar-bg:${bg};--avatar-fg:${fg}" aria-hidden="true">${escapeHTML(initial.toUpperCase())}</div>`;
+  };
+
+  const searchText = (person) => [
+    person.name,
+    person.meta,
+    person.bio,
+    person.history,
+    person.role || "",
+    (person.tags || []).join(" ")
+  ].join(" ").toLowerCase();
+
+  const personCard = (person, extraClass = "") => {
+    const badge = person.badge
+      ? `<span class="person-badge ${escapeHTML(person.badgeClass || "")}">${escapeHTML(person.badge)}</span>`
+      : "";
+    const tags = (person.tags || []).map((tag) => `<button type="button" class="tag" data-tag="${escapeHTML(tag)}">#${escapeHTML(tag)}</button>`).join("");
+    return `
+      <article class="person-card ${extraClass}" data-person data-group="${escapeHTML(person.group)}" data-search="${escapeHTML(searchText(person))}">
+        <div class="person-head">
+          ${avatarHTML(person.name)}
+          <div class="person-title">
+            <h3>${escapeHTML(person.name)}</h3>
+            <p class="meta">${escapeHTML(person.meta)}</p>
+          </div>
+          ${badge}
+        </div>
+        <p class="bio">${escapeHTML(person.bio)}</p>
+        <div class="person-foot">
+          <span class="history">${escapeHTML(person.history)}</span>
+          ${linksHTML(person)}
+          <div class="tags">${tags}</div>
+        </div>
+      </article>
+    `;
+  };
+
+  const leaderCard = (person) => personCard(person, "leader-card");
+
+  const render = () => {
+    const leaders = people.filter((p) => p.group === "leaders");
+    const casters = people.filter((p) => p.group === "casters");
+    const regulars = people.filter((p) => p.group === "regulars");
+    const revengers = people.filter((p) => p.group === "revengers");
+    const guests = people.filter((p) => p.group === "guests");
+
+    document.getElementById("leadersGrid").innerHTML = leaders.map(leaderCard).join("");
+    document.getElementById("castersGrid").innerHTML = casters.map((p) => personCard(p)).join("");
+    document.getElementById("streamersGrid").innerHTML = regulars.map((p) => personCard(p)).join("");
+    document.getElementById("revengersGrid").innerHTML = revengers.map((p) => personCard(p)).join("");
+    document.getElementById("guestsGrid").innerHTML = guests.map((p) => personCard(p)).join("");
+  };
+
+  render();
+
+  const cards = Array.from(document.querySelectorAll("[data-person]"));
+  const sections = Array.from(document.querySelectorAll("[data-section-group]"));
+  const chips = Array.from(document.querySelectorAll(".chip"));
+  const searchInput = document.getElementById("searchInput");
+  const clearSearch = document.getElementById("clearSearch");
+  const resultCount = document.getElementById("resultCount");
+  const emptyState = document.getElementById("emptyState");
+  let activeGroup = "all";
+  let query = "";
+
+  const updateChips = () => {
+    chips.forEach((chip) => {
+      const isActive = chip.dataset.filter === activeGroup;
+      chip.classList.toggle("is-active", isActive);
+      chip.setAttribute("aria-pressed", String(isActive));
+    });
+  };
+
+  const applyFilter = () => {
+    const normalizedQuery = query.trim().toLowerCase();
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const groupMatch = activeGroup === "all" || card.dataset.group === activeGroup;
+      const queryMatch = !normalizedQuery || card.dataset.search.includes(normalizedQuery);
+      const show = groupMatch && queryMatch;
+      card.classList.toggle("is-hidden", !show);
+      if (show) visibleCount += 1;
+    });
+
+    sections.forEach((section) => {
+      const group = section.dataset.sectionGroup;
+      if (group === "overview" || group === "guide") {
+        section.classList.toggle("is-hidden", activeGroup !== "all" || Boolean(normalizedQuery));
+        return;
+      }
+      const sectionCards = Array.from(section.querySelectorAll("[data-person]"));
+      const hasVisibleCard = sectionCards.some((card) => !card.classList.contains("is-hidden"));
+      const groupMatch = activeGroup === "all" || group === activeGroup;
+      section.classList.toggle("is-hidden", !groupMatch || !hasVisibleCard);
+    });
+
+    if (normalizedQuery) {
+      resultCount.innerHTML = `<b>${visibleCount}</b>名が該当`;
+    } else {
+      resultCount.innerHTML = `<b>${visibleCount}</b>名を表示`;
+    }
+    emptyState.hidden = visibleCount !== 0;
+    clearSearch.hidden = !normalizedQuery;
+  };
+
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      activeGroup = chip.dataset.filter;
+      updateChips();
+      applyFilter();
+      if (activeGroup !== "all") {
+        const target = document.querySelector(`[data-section-group="${activeGroup}"]`);
+        if (target) {
+          window.setTimeout(() => target.scrollIntoView({ behavior: "smooth", block: "start" }), 40);
+        }
+      }
+    });
+  });
+
+  searchInput.addEventListener("input", (event) => {
+    query = event.target.value;
+    if (query.trim() && activeGroup !== "all") {
+      activeGroup = "all";
+      updateChips();
+    }
+    applyFilter();
+  });
+
+  clearSearch.addEventListener("click", () => {
+    query = "";
+    searchInput.value = "";
+    searchInput.focus();
+    applyFilter();
+  });
+
+  // Tag click -> filter by that tag.
+  document.addEventListener("click", (event) => {
+    const tagButton = event.target.closest(".tag");
+    if (!tagButton) return;
+    const tag = tagButton.dataset.tag || "";
+    if (!tag) return;
+    query = tag;
+    searchInput.value = tag;
+    activeGroup = "all";
+    updateChips();
+    applyFilter();
+    window.setTimeout(() => {
+      const firstVisible = document.querySelector("[data-person]:not(.is-hidden)");
+      if (firstVisible) firstVisible.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 40);
+  });
+
+  // Countdown to DAY1 opening (JST)
+  const targetTime = new Date("2026-11-28T14:30:00+09:00").getTime();
+  const pad = (value) => String(value).padStart(2, "0");
+  const tick = () => {
+    const diff = targetTime - Date.now();
+    if (diff <= 0) {
+      document.getElementById("cd-days").textContent = "00";
+      document.getElementById("cd-hours").textContent = "00";
+      document.getElementById("cd-minutes").textContent = "00";
+      document.getElementById("cd-seconds").textContent = "00";
+      return;
+    }
+    const days = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const minutes = Math.floor((diff % 3600000) / 60000);
+    const seconds = Math.floor((diff % 60000) / 1000);
+    document.getElementById("cd-days").textContent = String(days);
+    document.getElementById("cd-hours").textContent = pad(hours);
+    document.getElementById("cd-minutes").textContent = pad(minutes);
+    document.getElementById("cd-seconds").textContent = pad(seconds);
+  };
+  tick();
+  window.setInterval(tick, 1000);
+
+  // Back to top
+  const toTop = document.getElementById("toTop");
+  const onScroll = () => {
+    toTop.classList.toggle("is-visible", window.scrollY > 620);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      searchInput.blur();
+    }
+  });
+</script>
+</body>
+</html>
