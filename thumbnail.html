@@ -14,26 +14,18 @@
   }
   *{box-sizing:border-box}
   html,body{margin:0;width:1200px;height:630px;overflow:hidden}
-  body{
-    font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,Meiryo,sans-serif;
-    background:var(--bg);
-    color:var(--ink);
-  }
+  body{font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,Meiryo,sans-serif;background:var(--bg);color:var(--ink)}
   .canvas{
-    position:relative;
-    width:1200px;height:630px;
-    overflow:hidden;
+    position:relative;width:1200px;height:630px;overflow:hidden;
     background:
-      radial-gradient(720px 420px at 8% 10%,rgba(57,230,255,.24),transparent 64%),
-      radial-gradient(620px 420px at 94% 0%,rgba(255,77,157,.2),transparent 66%),
-      radial-gradient(520px 360px at 55% 110%,rgba(255,209,102,.14),transparent 70%),
-      radial-gradient(460px 320px at 30% 82%,rgba(93,242,166,.12),transparent 70%),
+      radial-gradient(760px 440px at 8% 10%,rgba(57,230,255,.24),transparent 64%),
+      radial-gradient(640px 440px at 94% 0%,rgba(255,77,157,.2),transparent 66%),
+      radial-gradient(540px 380px at 55% 112%,rgba(255,209,102,.14),transparent 70%),
+      radial-gradient(480px 340px at 28% 84%,rgba(93,242,166,.12),transparent 70%),
       linear-gradient(135deg,#05060b 0%,#0a0d18 54%,#121525 100%);
   }
   .canvas::before{
-    content:"";
-    position:absolute;
-    inset:0;
+    content:"";position:absolute;inset:0;
     background-image:
       linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
       linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),
@@ -45,164 +37,36 @@
     -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.85),transparent 92%);
   }
   .canvas::after{
-    content:"";
-    position:absolute;
-    right:-130px;bottom:-190px;
-    width:560px;height:560px;
-    border-radius:50%;
+    content:"";position:absolute;right:-130px;bottom:-190px;width:560px;height:560px;border-radius:50%;
     border:1px solid rgba(57,230,255,.14);
     box-shadow:0 0 0 46px rgba(57,230,255,.03),0 0 0 92px rgba(255,77,157,.02);
   }
-  .frame{
-    position:absolute;
-    inset:26px;
-    border:1px solid rgba(255,255,255,.14);
-    border-radius:26px;
-    pointer-events:none;
-  }
-  .content{
-    position:relative;
-    z-index:2;
-    display:grid;
-    grid-template-columns:1.25fr .75fr;
-    gap:34px;
-    height:100%;
-    padding:58px 64px 52px;
-  }
+  .frame{position:absolute;inset:24px;border:1px solid rgba(255,255,255,.14);border-radius:26px;pointer-events:none}
+  .content{position:relative;z-index:2;display:grid;grid-template-columns:1.12fr .88fr;gap:26px;height:100%;padding:52px 58px 44px}
   .left{display:flex;flex-direction:column;justify-content:center;min-width:0}
   .eyebrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .date{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:6px 11px;
-    border:1px solid rgba(57,230,255,.28);
-    border-radius:999px;
-    background:rgba(7,10,18,.55);
-    color:#c9f8ff;
-    font-size:11px;font-weight:800;letter-spacing:.16em;
-  }
+  .date{display:inline-flex;align-items:center;gap:8px;padding:6px 11px;border:1px solid rgba(57,230,255,.28);border-radius:999px;background:rgba(7,10,18,.55);color:#c9f8ff;font-size:10.5px;font-weight:800;letter-spacing:.14em}
   .date .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
-  .unofficial{
-    display:inline-flex;align-items:center;
-    padding:6px 11px;
-    border-radius:5px;
-    background:var(--gold);
-    color:#17221f;
-    font-size:10px;font-weight:900;letter-spacing:.14em;
-  }
-  .kicker{
-    margin:26px 0 4px;
-    color:#8fa3c6;
-    font-size:12px;font-weight:800;letter-spacing:.24em;
-  }
-  .title{
-    margin:0;
-    font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;
-    font-size:92px;
-    line-height:.98;
-    letter-spacing:-.07em;
-    font-weight:900;
-    color:#fff7e8;
-  }
-  .title .final{
-    display:inline-block;
-    background:linear-gradient(95deg,var(--cyan) 0%,#9cf8ff 24%,var(--gold) 56%,var(--pink) 100%);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-  }
-  .sub{
-    margin:10px 0 0;
-    font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;
-    font-size:38px;
-    line-height:1.15;
-    font-weight:700;
-    letter-spacing:.14em;
-    color:#e3ecff;
-  }
-  .lead{
-    max-width:610px;
-    margin:18px 0 0;
-    color:#b9c6e2;
-    font-size:15px;
-    line-height:1.8;
-  }
+  .unofficial{display:inline-flex;align-items:center;padding:6px 11px;border-radius:5px;background:var(--gold);color:#17221f;font-size:10px;font-weight:900;letter-spacing:.14em}
+  .kicker{margin:22px 0 4px;color:#8fa3c6;font-size:11px;font-weight:800;letter-spacing:.24em}
+  .title{margin:0;font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;font-size:82px;line-height:.98;letter-spacing:-.07em;font-weight:900;color:#fff7e8}
+  .title .final{display:inline-block;background:linear-gradient(95deg,var(--cyan) 0%,#9cf8ff 24%,var(--gold) 56%,var(--pink) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{margin:8px 0 0;font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;font-size:34px;line-height:1.15;font-weight:700;letter-spacing:.14em;color:#e3ecff}
+  .lead{max-width:555px;margin:15px 0 0;color:#b9c6e2;font-size:13.5px;line-height:1.75}
   .lead b{color:#fff;font-weight:800}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-  .chips span{
-    padding:7px 12px;
-    border:1px solid rgba(255,255,255,.2);
-    border-radius:999px;
-    background:rgba(255,255,255,.055);
-    color:#e2e9ff;
-    font-size:11px;font-weight:800;letter-spacing:.12em;
-  }
-  .bottom{
-    display:flex;align-items:center;gap:12px;
-    margin-top:26px;
-    color:#94a6c8;
-    font-size:11px;font-weight:700;letter-spacing:.08em;
-  }
-  .bottom .x{
-    display:inline-flex;align-items:center;justify-content:center;
-    width:24px;height:24px;
-    border-radius:50%;
-    background:#0f1419;
-    color:#fff;
-    font-size:11px;font-weight:900;
-  }
-  .right{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-width:0;
-  }
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
-    width:100%;
-    max-width:330px;
-    transform:rotate(-3deg);
-  }
-  .tile{
-    position:relative;
-    aspect-ratio:1;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:18px;
-    background:linear-gradient(145deg,var(--tile-bg),color-mix(in srgb,var(--tile-bg) 65%,#000));
-    color:var(--tile-fg);
-    font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;
-    font-size:34px;
-    font-weight:900;
-    box-shadow:inset 0 0 0 1px rgba(255,255,255,.22),0 10px 24px rgba(0,0,0,.28);
-    overflow:hidden;
-  }
-  .tile::after{
-    content:"X";
-    position:absolute;
-    right:5px;bottom:5px;
-    display:flex;align-items:center;justify-content:center;
-    width:15px;height:15px;
-    border-radius:50%;
-    background:#0f1419;
-    color:#fff;
-    font-family:"Noto Sans JP",sans-serif;
-    font-size:8px;
-    font-weight:900;
-    border:2px solid #0f1422;
-  }
-  .tile:nth-child(3n+1){transform:translateY(4px)}
-  .tile:nth-child(3n+2){transform:translateY(-3px)}
-  .tile:nth-child(3n){transform:translateY(2px)}
-  .badge{
-    position:absolute;
-    right:64px;bottom:38px;
-    z-index:2;
-    color:#7f8dad;
-    font-size:10px;font-weight:700;letter-spacing:.12em;
-  }
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+  .chips span{padding:6px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(255,255,255,.055);color:#e2e9ff;font-size:10px;font-weight:800;letter-spacing:.11em}
+  .bottom{display:flex;align-items:center;gap:9px;margin-top:20px;color:#94a6c8;font-size:10px;font-weight:700;letter-spacing:.06em}
+  .bottom .x{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#0f1419;color:#fff;font-size:10px;font-weight:900;flex:none}
+  .right{display:flex;align-items:center;justify-content:center;min-width:0;position:relative}
+  .right::before{content:"";position:absolute;width:390px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(57,230,255,.12),transparent 65%);filter:blur(6px)}
+  .grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;max-width:356px;transform:rotate(-2deg)}
+  .tile{position:relative;aspect-ratio:1;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.22);background:linear-gradient(145deg,#1a2030,#0c101a);box-shadow:0 10px 24px rgba(0,0,0,.34),0 0 0 2px var(--glow),0 0 22px color-mix(in srgb,var(--glow) 28%,transparent)}
+  .tile img{width:100%;height:100%;object-fit:cover;display:block}
+  .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 58%,rgba(0,0,0,.5));pointer-events:none}
+  .tile .initial{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:42px;font-weight:900;color:#fff}
+  .tile-x{position:absolute;right:5px;bottom:5px;z-index:2;display:flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#0f1419;color:#fff;font-family:"Noto Sans JP",sans-serif;font-size:8px;font-weight:900;border:2px solid #0f1422}
+  .credit{position:absolute;right:58px;bottom:34px;z-index:2;color:#7f8dad;font-size:9.5px;font-weight:700;letter-spacing:.08em}
 </style>
 </head>
 <body>
@@ -217,30 +81,28 @@
         <div class="kicker">HYPER GAME EVENT FINAL</div>
         <h1 class="title">ハイゲ <span class="final">FINAL</span></h1>
         <p class="sub">出演者まとめ</p>
-        <p class="lead"><b>62名</b>の経歴・過去ハイゲ歴・SNSリンクをまとめた非公式ガイド。</p>
-        <div class="chips">
-          <span>4 TEAMS</span><span>40+ STREAMERS</span><span>8 GAMES</span><span>2 DAYS</span>
-        </div>
-        <div class="bottom"><span class="x">X</span> Xのプロフィールアイコンで出演者を紹介 / 公式画像・ロゴは不使用</div>
+        <p class="lead"><b>62名</b>の経歴・過去ハイゲ歴・SNSリンクをまとめた非公式ガイド。<br>Xのプロフィールアイコンで出演者を紹介しています。</p>
+        <div class="chips"><span>4 TEAMS</span><span>40+ STREAMERS</span><span>8 GAMES</span><span>2 DAYS</span></div>
+        <div class="bottom"><span class="x">X</span>アイコンはXのプロフィール画像 / 公式画像・ロゴは不使用</div>
       </div>
       <div class="right">
         <div class="grid">
-          <div class="tile" style="--tile-bg:#6d28d9;--tile-fg:#ede9fe">K</div>
-          <div class="tile" style="--tile-bg:#0f6b5c;--tile-fg:#d9f3ea">S</div>
-          <div class="tile" style="--tile-bg:#9f1239;--tile-fg:#ffe4e6">も</div>
-          <div class="tile" style="--tile-bg:#155e75;--tile-fg:#cffafe">関</div>
-          <div class="tile" style="--tile-bg:#be123c;--tile-fg:#ffe4e6">赤</div>
-          <div class="tile" style="--tile-bg:#1e40af;--tile-fg:#dbeafe">渋</div>
-          <div class="tile" style="--tile-bg:#9a3412;--tile-fg:#ffedd5">天</div>
-          <div class="tile" style="--tile-bg:#3f6212;--tile-fg:#ecfccb">た</div>
-          <div class="tile" style="--tile-bg:#831843;--tile-fg:#fce7f3">え</div>
-          <div class="tile" style="--tile-bg:#a16207;--tile-fg:#fef3c7">布</div>
-          <div class="tile" style="--tile-bg:#0e7490;--tile-fg:#cffafe">L</div>
-          <div class="tile" style="--tile-bg:#7c3aed;--tile-fg:#ede9fe">加</div>
+          <div class="tile" style="--glow:#39e6ff"><img src="https://pbs.twimg.com/profile_images/2111326957585793024/zYVX2uSy_400x400.jpg" alt="k4sen" loading="eager" referrerpolicy="no-referrer"><span class="tile-x">X</span></div>
+          <div class="tile" style="--glow:#ff4d9d"><img src="https://pbs.twimg.com/profile_images/1871100394421796864/bEE1YV-7_400x400.jpg" alt="SHAKA" loading="eager" referrerpolicy="no-referrer"><span class="tile-x">X</span></div>
+          <div class="tile" style="--glow:#ffd166"><img src="https://pbs.twimg.com/profile_images/1918686136719052800/hXngsDff_400x400.jpg" alt="もこう" loading="eager" referrerpolicy="no-referrer"><span class="tile-x">X</span></div>
+          <div class="tile" style="--glow:#5df2a6"><img src="https://pbs.twimg.com/profile_images/2098111412950433792/XAiVNyJ__400x400.jpg" alt="関優太" loading="eager" referrerpolicy="no-referrer"><span class="tile-x">X</span></div>
+          <div class="tile" style="--glow:#39e6ff"><img src="https://pbs.twimg.com/profile_images/1567883469682012160/REhbDoot_400x400.jpg" alt="加藤純一" loading="eager" referrerpolicy="no-referrer"><span class="tile-x">X</span></div>
+          <div class="tile" style="--glow:#ff4d9d"><img src="https://pbs.twimg.com/profile_images/1488580321365086208/UEJ-cn-m_400x400.jpg" alt="赤見かるび" loading="eager" referrerpolicy="no-referrer"><span class="tile-x">X</span></div>
+          <div class="tile" style="--glow:#5df2a6"><img src="https://pbs.twimg.com/profile_images/1876596978723049472/FTZgqf3l_400x400.jpg" alt="渋谷ハル" loading="eager" referrerpolicy="no-referrer"><span class="tile-x">X</span></div>
+          <div class="tile" style="--glow:#ffd166"><img src="https://pbs.twimg.com/profile_images/1609859661922197504/3LpeQ8iW_400x400.jpg" alt="天月" loading="eager" referrerpolicy="no-referrer"><span class="tile-x">X</span></div>
+          <div class="tile" style="--glow:#39e6ff"><img src="https://pbs.twimg.com/profile_images/1042311297155526656/x9w0plZ1_400x400.jpg" alt="たいじ" loading="eager" referrerpolicy="no-referrer"><span class="tile-x">X</span></div>
+          <div class="tile" style="--glow:#ff4d9d"><img src="https://pbs.twimg.com/profile_images/1566064687976189953/AHpvbx_v_400x400.jpg" alt="えなこ" loading="eager" referrerpolicy="no-referrer"><span class="tile-x">X</span></div>
+          <div class="tile" style="--glow:#ffd166"><img src="https://pbs.twimg.com/profile_images/1587341318711189504/x0qcEtVX_400x400.jpg" alt="布団ちゃん" loading="eager" referrerpolicy="no-referrer"><span class="tile-x">X</span></div>
+          <div class="tile" style="--glow:#5df2a6"><img src="https://pbs.twimg.com/profile_images/2012468773358563328/5he0HtmR_400x400.jpg" alt="Laz" loading="eager" referrerpolicy="no-referrer"><span class="tile-x">X</span></div>
         </div>
       </div>
     </div>
-    <div class="badge">yokaroumon44-coder.github.io/hygame-final</div>
+    <div class="credit">yokaroumon44-coder.github.io/hygame-final</div>
   </div>
 </body>
 </html>
